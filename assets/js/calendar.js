@@ -99,7 +99,7 @@ const myFunc2 = () =>{
                 if(item.dates.includes(parseInt(td.innerText))) {
 
                     if(!td.classList.contains('ends')) {
-                        td.classList.add('option-date')
+                        td.style.backgroundColor = 'rgba(255, 151, 82, 0.733)'
                     }
                 }
               })
