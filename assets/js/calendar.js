@@ -14,7 +14,7 @@ window.addEventListener('load', () =>{
         if(sortedOptionalDates.at(-1).year === year && sortedOptionalDates.at(-1).month === month  ){
             return sortedOptionalDates.at(-1).dates.push(day)
         }else{
-            return sortedOptionalDates.push({year, month,day})
+            return sortedOptionalDates.push({year, month,dates: [day]})
         }
     })
     console.log(sortedOptionalDates)
