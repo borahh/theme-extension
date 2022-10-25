@@ -31,7 +31,7 @@ window.addEventListener('load', () =>{
 
         sortedOptionalDates.forEach(item =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
-                console.log(month, year)
+                console.log(calender.querySelectorAll('tbody td'))
             }
         })
         
