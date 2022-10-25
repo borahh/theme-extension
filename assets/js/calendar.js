@@ -134,7 +134,7 @@ window.addEventListener('load', () =>{
     const observer = new MutationObserver(myFunc)
     const observer2 = new MutationObserver(myFunc2)
     const observeElement1 = document.querySelector('#property-availability')
-    const observeElement2 = document.querySelector('.daterangepicker')
+    const observeElement2 = document.querySelector('.daterangepicker .calendar-table')
     console.log(observeElement2)
     myFunc()
     observer.observe(observeElement1, {childList: true, subtree: true })
