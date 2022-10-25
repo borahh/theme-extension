@@ -84,7 +84,6 @@ const myFunc = () =>{
 }
 const myFunc2 = () =>{
     const calenders = document.querySelectorAll('.daterangepicker .calendar-table')
-    console.log(calenders)
     // get optional date in json format
     const optionalDates = document.querySelector('#property-availability').getAttribute('data-option-dates').split(',')
     const sortedOptionalDates = []
@@ -122,6 +121,7 @@ const myFunc2 = () =>{
     calenders.forEach(async calender =>{
         const ele =await waitForElm('.month')
         const [month, year] = ele.innerText.split(' ')
+        console.log(month, year)
         sortedOptionalDates.forEach(item =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
               calender.querySelectorAll('table tbody td').forEach(td =>{
