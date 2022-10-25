@@ -10,3 +10,7 @@ body div.daterangepicker .calendar-table tbody tr .ends{
     color: white;
     cursor: not-allowed !important;
 }
+
+.calendar-guide .clearfix .option::before{
+    background-color: rgba(255, 151, 82, 0.733) !important;
+}
