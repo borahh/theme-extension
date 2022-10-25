@@ -71,7 +71,7 @@ const myFunc2 = () =>{
 
 window.addEventListener('load', () =>{
     const observer2 = new MutationObserver(() => console.log('wroking'))
-    const observeElement = document.querySelector('.daterangepicker .drp-calender')
+    const observeElement = document.querySelector('.daterangepicker .drp-calendar')
     // myFunc2()
     observer2.observe(observeElement, {childList: true, subtree: true})
 
