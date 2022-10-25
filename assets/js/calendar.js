@@ -21,6 +21,7 @@ const myFunc = () =>{
 
     // get blocked dates in json format
     const blockedDates = document.querySelector('#property-availability').getAttribute('data-blocked-dates').split(',')
+    console.log(blockedDates)
     const sortedBlockedDates = []
     blockedDates.forEach(item =>{
         const [year, month, day] = item.split('-')
