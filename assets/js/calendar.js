@@ -1,6 +1,7 @@
 const monthNumber = ["january", "february", "march", "spril", "may", "june", "july", "august", "september", "october", "november", "december"]
 
-window.addEventListener('load', () =>{
+
+const myFunc = () =>{
     const calenders = document.querySelectorAll('.availability-calendar')
 
     // get optional date in json format
@@ -41,4 +42,19 @@ window.addEventListener('load', () =>{
         })
         
     })
+}
+window.addEventListener('load', () =>{
+   myFunc()
+   const nextButton = document.querySelectorAll('.availability-calendar .next')
+   const prevButton = document.querySelectorAll('.availability-calendar .prev')
+   nextButton.forEach(item =>{
+    item.addEventListener('click', () =>{
+        myFunc()
+    })
+   })
+   prevButton.forEach(item =>{
+    item.addEventListener('click', () =>{
+         myFunc()
+    })
+   })
 })
