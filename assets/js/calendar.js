@@ -9,7 +9,7 @@ window.addEventListener('load', () =>{
     optionalDates.forEach(item =>{
         const [year, month, day] = item.split('-')
         if(sortedOptionalDates.length ===0){
-            return sortedOptionalDates.push({year , month, day})
+            return sortedOptionalDates.push({year , month, dates: [day]})
         }
         if(sortedOptionalDates.at(-1).year === year && sortedOptionalDates.at(-1).month === month  ){
             return sortedOptionalDates.at(-1).dates.push(day)
