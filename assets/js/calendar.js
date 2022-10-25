@@ -65,7 +65,7 @@ const myFunc = () =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
               calender.querySelectorAll('table tbody td').forEach(td =>{
                 if(item.dates.includes(parseInt(td.innerText))) {
-                    td.classList.add('option-date')
+                    td.style.backgroundColor = 'rgba(255, 151, 82, 0.733)'
                 }
               })
             }
@@ -99,7 +99,7 @@ const myFunc2 = () =>{
                 if(item.dates.includes(parseInt(td.innerText))) {
 
                     if(!td.classList.contains('ends')) {
-                        td.style.backgroundColor = 'rgba(255, 151, 82, 0.733)'
+                        td.classList.add('option-date')
                     }
                 }
               })
