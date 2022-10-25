@@ -2,6 +2,7 @@
 
 
 const myFunc2 = () =>{
+    console.log( document.querySelector('.daterangepicker'))
     const calenders = document.querySelectorAll('.calendar-table')
 
     // get optional date in json format
