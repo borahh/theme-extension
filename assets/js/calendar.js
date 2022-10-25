@@ -101,7 +101,7 @@ const myFunc2 = () =>{
 
     calenders.forEach(calender =>{
         console.log(calender.querySelector('.month'))
-        const [month, year] = calender.querySelector('.month').innerText.split(' ')
+        const [month, year] = calender.querySelector('.month').innerHTML.split(' ')
 
         sortedOptionalDates.forEach(item =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
