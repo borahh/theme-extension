@@ -1,4 +1,4 @@
-body div.daterangepicker .calendar-table td.reserved{
+body div.daterangepicker .calendar-table td.ends{
     background-color: transparent !important;
     color: #999;
 }
