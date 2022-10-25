@@ -100,7 +100,7 @@ const myFunc2 = () =>{
  
 
     calenders.forEach(calender =>{
-        const [month, year] = calender.querySelector('.month').innerHTML.split(' ')
+        const [month, year] = calender.querySelector('.month').innerText.split(' ')
 
         sortedOptionalDates.forEach(item =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
@@ -133,8 +133,14 @@ window.addEventListener('load', () =>{
     const observer2 = new MutationObserver(myFunc2)
     const observeElement1 = document.querySelector('#property-availability')
     const observeElement2 = document.querySelector('body')
+    const dateInputs = document.querySelectorAll('#rvr-check-in-rvr_booking_widget-1')
     myFunc()
     observer.observe(observeElement1, {childList: true, subtree: true })
-    observer2.observe(observeElement2, {childList:true, subtree: true})
+   
+    dateInputs.forEach(item =>{
+         item.addEventListener('click', () =>{
+            observer2.observe(observeElement2, {childList:true, subtree: true})
+         })
+    })
 
 })
