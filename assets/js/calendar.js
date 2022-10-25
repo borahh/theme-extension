@@ -68,6 +68,6 @@ window.addEventListener('load', () =>{
     const observer = new MutationObserver(myFunc)
     const observeElement = document.querySelector('#property-availability')
     myFunc()
-    observer.observe(observeElement, { attributes: true, childList: true, subtree: true })
+    observer.observe(observeElement, {  childList: true, subtree: true })
 
 })
