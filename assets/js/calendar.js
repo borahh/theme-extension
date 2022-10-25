@@ -17,7 +17,6 @@ window.addEventListener('load', () =>{
             return sortedOptionalDates.push({year, month,dates: [day]})
         }
     })
-    console.log(sortedOptionalDates)
 
     // get blocked dates in json format
     const blockedDates = document.querySelector('#property-availability').getAttribute('data-blocked-dates').split(',')
@@ -29,5 +28,12 @@ window.addEventListener('load', () =>{
     calenders.forEach(calender =>{
         const [month, year] = calender.querySelector('.month-name').innerText.split(',')
         // console.log(monthNumber.indexOf(month.toLowerCase()) + 1, year.replace(" ", ''))
+
+        sortedOptionalDates.forEach(item =>{
+            if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
+                console.log(item)
+            }
+        })
+        
     })
 })
