@@ -119,7 +119,8 @@ const myFunc2 = () =>{
  
 
     calenders.forEach(async calender =>{
-        const [month, year] =await waitForElm('.month').innerText.split(' ')
+        const ele =await waitForElm('.month')
+        const [month, year] = ele.innerText.split(' ')
 
         sortedOptionalDates.forEach(item =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
