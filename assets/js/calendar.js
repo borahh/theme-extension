@@ -58,6 +58,7 @@ const myFunc = () =>{
                 if(item.dates.includes(parseInt(td.innerText))) {
                     td.classList.remove('available')
                     td.classList.add('unavailable')
+                    td.style.color = 'white'
                 }
               })
             }
