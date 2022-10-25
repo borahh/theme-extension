@@ -6,7 +6,7 @@ window.addEventListener('load', () =>{
     })
     const blockedDates = document.querySelector('#property-availability').getAttribute('data-blocked-dates').split(',')
     const jsonBlockedDates = blockedDates.map(item =>{
-        const [year, month, day] = item.split('-')
+        const [day,month, year] = item.split('-')
         return {year, month, day}
     })
     console.log(jsonOptionalDates, jsonBlockedDates)
