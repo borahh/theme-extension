@@ -44,19 +44,9 @@ const myFunc = () =>{
     })
 }
 window.addEventListener('load', () =>{
-   myFunc()
-   const nextButton = document.querySelectorAll('.availability-calendar .next')
-   const prevButton = document.querySelectorAll('.availability-calendar .prev')
-   nextButton.forEach(item =>{
-    item.addEventListener('click', () =>{
-        myFunc()
-        console.log('working')
-    })
-   })
-   prevButton.forEach(item =>{
-    item.addEventListener('click', () =>{
-         myFunc()
-         console.log('working')
-    })
-   })
+    const observer = new MutationObserver(myFunc)
+    const observeElement = document.querySelector('#property-availability')
+    myFunc()
+    observer.observe(observeElement, { attributes: true, childList: true, subtree: true })
+
 })
