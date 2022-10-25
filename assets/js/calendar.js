@@ -21,10 +21,19 @@ const myFunc = () =>{
 
     // get blocked dates in json format
     const blockedDates = document.querySelector('#property-availability').getAttribute('data-blocked-dates').split(',')
-    const jsonBlockedDates = blockedDates.map(item =>{
-        const [day,month, year] = item.split('-')
-        return {year, month, day}
+    const sortedBlockedDates = []
+    blockedDates.forEach(item =>{
+        const [year, month, day] = item.split('-')
+        if(sortedBlockedDates.length ===0){
+            return sortedOptionalDates.push({year , month, dates: [parseInt(day)]})
+        }
+        if(sortedBlockedDates.at(-1).year === year && sortedBlockedDates.at(-1).month === month  ){
+            return sortedBlockedDates.at(-1).dates.push(parseInt(day))
+        }else{
+            return sortedBlockedDates.push({year, month,dates: [parseInt(day)]})
+        }
     })
+
 
     calenders.forEach(calender =>{
         const [month, year] = calender.querySelector('.month-name').innerText.split(',')
@@ -36,6 +45,16 @@ const myFunc = () =>{
               calender.querySelectorAll('table tbody td').forEach(td =>{
                 if(item.dates.includes(parseInt(td.innerText))) {
                     td.style.backgroundColor = 'rgba(128, 128, 128, 0.2)'
+                }
+              })
+            }
+        })
+        sortedBlockedDates.forEach(item =>{
+            if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
+                console.log(item.dates)
+              calender.querySelectorAll('table tbody td').forEach(td =>{
+                if(item.dates.includes(parseInt(td.innerText))) {
+                    td.classList.add('unavailable')
                 }
               })
             }
