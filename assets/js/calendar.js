@@ -122,6 +122,7 @@ const myFunc2 = () =>{
         const ele =await waitForElm('.month')
         const [month, year] = ele.innerText.split(' ')
         console.log(month, year)
+
         sortedOptionalDates.forEach(item =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
               calender.querySelectorAll('table tbody td').forEach(td =>{
@@ -152,7 +153,7 @@ window.addEventListener('load', () =>{
     const observer = new MutationObserver(myFunc)
     const observer2 = new MutationObserver(myFunc2)
     const observeElement1 = document.querySelector('#property-availability')
-    const observeElement2 = document.querySelector('body')
+    const observeElement2 = document.querySelector('.daterangepicker')
     // const dateInputs = document.querySelectorAll('#rvr-check-in-rvr_booking_widget-1')
     myFunc()
     myFunc2()
