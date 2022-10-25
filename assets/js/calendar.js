@@ -34,7 +34,7 @@ window.addEventListener('load', () =>{
                 console.log(item.dates)
               calender.querySelectorAll('table tbody td').forEach(td =>{
                 if(item.dates.includes(parseInt(td.innerText))) {
-                    td.style.backgroundColor = 'red'
+                    td.style.backgroundColor = '#ff7ff0'
                 }
               })
             }
