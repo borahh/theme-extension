@@ -1,3 +1,5 @@
+const monthNumber = ["january", "february", "march", "spril", "may", "june", "july", "august", "september", "october", "november", "december"]
+
 window.addEventListener('load', () =>{
     const calenders = document.querySelectorAll('.availability-calendar')
     const optionalDates = document.querySelector('#property-availability').getAttribute('data-option-dates').split(',')
@@ -12,6 +14,6 @@ window.addEventListener('load', () =>{
     })
     calenders.forEach(calender =>{
         const [month, year] = calender.querySelector('.month-name').innerText.split(',')
-        console.log(month, year)
+        console.log(monthNumber.indexOf(month.toLowerCase()), year)
     })
 })
