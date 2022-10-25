@@ -11,7 +11,7 @@ window.addEventListener('load', () =>{
         return {year, month, day}
     })
     calenders.forEach(calender =>{
-        const calenderMonth = calender.querySelector('.month-name')
+        const calenderMonth = calender.querySelector('.month-name').innerText
         console.log(calenderMonth)
     })
 })
