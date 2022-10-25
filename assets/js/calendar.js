@@ -4,5 +4,10 @@ window.addEventListener('load', () =>{
         const [year, month, day] = item.split('-')
         return {year, month, day}
     })
-    console.log(jsonOptionalDates)
+    const blockedDates = document.querySelector('#property-availability').getAttribute('data-blocked-dates').split(',')
+    const jsonBlockedDates = blockedDates.map(item =>{
+        const [year, month, day] = item.split('-')
+        return {year, month, day}
+    })
+    console.log(jsonOptionalDates, jsonBlockedDates)
 })
