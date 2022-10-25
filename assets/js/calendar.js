@@ -1,4 +1,5 @@
 window.addEventListener('load', () =>{
+    const calenders = document.querySelectorAll('.availability-calendar')
     const optionalDates = document.querySelector('#property-availability').getAttribute('data-option-dates').split(',')
     const jsonOptionalDates = optionalDates.map(item =>{
         const [year, month, day] = item.split('-')
@@ -9,5 +10,5 @@ window.addEventListener('load', () =>{
         const [day,month, year] = item.split('-')
         return {year, month, day}
     })
-    console.log(jsonOptionalDates, jsonBlockedDates)
+   console.log(calenders)
 })
