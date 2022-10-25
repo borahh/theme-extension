@@ -98,7 +98,10 @@ const myFunc2 = () =>{
               calender.querySelectorAll('table tbody td').forEach(td =>{
                 if(item.dates.includes(parseInt(td.innerText))) {
 
-                    if(!td.classList.contains('ends')) td.classList.add('option-date')
+                    if(!td.classList.contains('ends')) {
+                        td.classList.add('option-date')
+                        td.classList.add('disabled')
+                    }
                 }
               })
             }

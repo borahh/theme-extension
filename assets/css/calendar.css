@@ -6,5 +6,6 @@ body div.daterangepicker .calendar-table tbody tr .ends{
 }
 
 .option-date{
-    background-color: rgba(128, 128, 128, 0.2);
+    background-color: rgba(255, 103, 2, 0.733);
+    pointer-events: none;
 }
