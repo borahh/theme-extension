@@ -20,9 +20,7 @@ function waitForElm(selector) {
     });
 }
 
-const myFunc = () =>{
-    const calenders = document.querySelectorAll('.availability-calendar')
-
+const sortData = () =>{
     // get optional date in json format
     const optionalDates = document.querySelector('#property-availability').getAttribute('data-option-dates').split(',')
     const sortedOptionalDates = []
@@ -52,6 +50,16 @@ const myFunc = () =>{
             return sortedBlockedDates.push({year, month,dates: [parseInt(day)]})
         }
     })
+   return {sortedOptionalDates, sortedBlockedDates}
+
+}
+
+const myFunc = () =>{
+    const calenders = document.querySelectorAll('.availability-calendar')
+
+ 
+
+   const {sortedOptionalDates, sortedBlockedDates} = sortData()
    
  
 
