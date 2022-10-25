@@ -70,7 +70,7 @@ const myFunc2 = () =>{
 }
 
 window.addEventListener('load', () =>{
-    const observer = new MutationObserver(myFunc2)
+    const observer = new MutationObserver(() => console.log('wroking'))
     const observeElement = document.querySelector('.daterangepicker')
     console.log(observeElement)
     // myFunc2()
