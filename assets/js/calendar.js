@@ -35,7 +35,7 @@ const myFunc = () =>{
                 console.log(item.dates)
               calender.querySelectorAll('table tbody td').forEach(td =>{
                 if(item.dates.includes(parseInt(td.innerText))) {
-                    td.style.backgroundColor = '#ff7ff0'
+                    td.style.backgroundColor = 'rgba(128, 128, 128, 0.2)'
                 }
               })
             }
