@@ -2,13 +2,13 @@ const monthNumber = ["january", "february", "march", "spril", "may", "june", "ju
 
 function waitForElm(selector) {
     return new Promise(resolve => {
-        if (document.querySelector(selector)) {
-            return resolve(document.querySelector(selector));
+        if (selector) {
+            return resolve(selector);
         }
 
         const observer = new MutationObserver(mutations => {
-            if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
+            if (selector) {
+                resolve(selector);
                 observer.disconnect();
             }
         });
@@ -90,7 +90,8 @@ const myFunc2 = () =>{
     const {sortedOptionalDates, sortedBlockedDates} = sortData()
 
     calenders.forEach(async calender =>{
-        const [month, year] = calender.querySelector('.month').innerText.split(' ')
+        const ele =  await waitForElm(calender.querySelector('.month'))
+        const [month, year] =ele.innerText.split(' ')
         console.log(month, year)
 
         sortedOptionalDates.forEach(item =>{
