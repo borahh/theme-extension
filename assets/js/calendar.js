@@ -42,7 +42,6 @@ const myFunc = () =>{
 
         sortedOptionalDates.forEach(item =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
-                console.log(item.dates)
               calender.querySelectorAll('table tbody td').forEach(td =>{
                 if(item.dates.includes(parseInt(td.innerText))) {
                     td.style.backgroundColor = 'rgba(128, 128, 128, 0.2)'
@@ -53,9 +52,8 @@ const myFunc = () =>{
 
         sortedBlockedDates.forEach(item =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
-                console.log(item.dates)
               calender.querySelectorAll('table tbody td').forEach(td =>{
-                if(item.dates.includes(parseInt(td.innerText))) {
+                if(item.dates.includes(parseInt(td.innerText))){
                     td.classList.remove('available')
                     td.classList.add('unavailable')
                     td.style.color = 'white'
