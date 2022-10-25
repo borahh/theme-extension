@@ -83,7 +83,7 @@ const myFunc = () =>{
     })
 }
 const myFunc2 = () =>{
-    const calenders = document.querySelectorAll('.calendar-table')
+    const calenders = document.querySelectorAll('.daterangepicker .calendar-table')
     console.log(calenders)
     // get optional date in json format
     const optionalDates = document.querySelector('#property-availability').getAttribute('data-option-dates').split(',')
@@ -115,7 +115,7 @@ const myFunc2 = () =>{
         }
     })
    
-    console.log(sortedBlockedDates, sortedOptionalDates)
+
    
  
 
