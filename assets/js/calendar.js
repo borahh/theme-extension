@@ -1,5 +1,24 @@
 const monthNumber = ["january", "february", "march", "spril", "may", "june", "july", "august", "september", "october", "november", "december"]
 
+function waitForElm(selector) {
+    return new Promise(resolve => {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+
+        const observer = new MutationObserver(mutations => {
+            if (document.querySelector(selector)) {
+                resolve(document.querySelector(selector));
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    });
+}
 
 const myFunc = () =>{
     const calenders = document.querySelectorAll('.availability-calendar')
@@ -36,8 +55,8 @@ const myFunc = () =>{
    
  
 
-    calenders.forEach(calender =>{
-        const [month, year] = calender.querySelector('.month-name').innerText.split(',')
+    calenders.forEach( async calender =>{
+        const [month, year] = await waitForElm('.month').innerText.split(',')
 
         sortedOptionalDates.forEach(item =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
