@@ -100,7 +100,6 @@ const myFunc2 = () =>{
 
                     if(!td.classList.contains('ends')) {
                         td.classList.add('option-date')
-                        td.classList.add('off')
                         td.classList.add('disabled')
                         td.classList.remove('available')
                     }
@@ -116,7 +115,6 @@ const myFunc2 = () =>{
                     if(!td.classList.contains('ends')){
                         td.classList.remove('available')
                     td.classList.add('disabled')
-                    td.classList.add('off')
                     td.classList.add('reserved')
                     td.style.color = 'white'
                     }
