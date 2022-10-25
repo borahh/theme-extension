@@ -50,11 +50,13 @@ window.addEventListener('load', () =>{
    nextButton.forEach(item =>{
     item.addEventListener('click', () =>{
         myFunc()
+        console.log('working')
     })
    })
    prevButton.forEach(item =>{
     item.addEventListener('click', () =>{
          myFunc()
+         console.log('working')
     })
    })
 })
