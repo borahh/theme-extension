@@ -56,13 +56,8 @@ const sortData = () =>{
 
 const myFunc = () =>{
     const calenders = document.querySelectorAll('.availability-calendar')
-
- 
-
    const {sortedOptionalDates, sortedBlockedDates} = sortData()
-   
  
-
     calenders.forEach(calender =>{
         const [month, year] = calender.querySelector('.month-name').innerText.split(',')
 
@@ -92,39 +87,7 @@ const myFunc = () =>{
 }
 const myFunc2 = () =>{
     const calenders = document.querySelectorAll('.daterangepicker .calendar-table')
-    // get optional date in json format
-    const optionalDates = document.querySelector('#property-availability').getAttribute('data-option-dates').split(',')
-    const sortedOptionalDates = []
-    optionalDates.forEach(item =>{
-        const [year, month, day] = item.split('-')
-        if(sortedOptionalDates.length ===0){
-            return sortedOptionalDates.push({year , month, dates: [parseInt(day)]})
-        }
-        if(sortedOptionalDates.at(-1).year === year && sortedOptionalDates.at(-1).month === month  ){
-            return sortedOptionalDates.at(-1).dates.push(parseInt(day))
-        }else{
-            return sortedOptionalDates.push({year, month,dates: [parseInt(day)]})
-        }
-    })
-
-    // get blocked dates in json format
-    const blockedDates = document.querySelector('#property-availability').getAttribute('data-blocked-dates').split(',')
-    const sortedBlockedDates = []
-    blockedDates.forEach(item =>{
-        const [day, month, year] = item.split('-')
-        if(sortedBlockedDates.length ===0){
-            return sortedBlockedDates.push({year , month, dates: [parseInt(day)]})
-        }
-        if(sortedBlockedDates.at(-1).year === year && sortedBlockedDates.at(-1).month === month  ){
-            return sortedBlockedDates.at(-1).dates.push(parseInt(day))
-        }else{
-            return sortedBlockedDates.push({year, month,dates: [parseInt(day)]})
-        }
-    })
-   
-
-   
- 
+    const {sortedOptionalDates, sortedBlockedDates} = sortData()
 
     calenders.forEach(async calender =>{
         const ele =await waitForElm('.month')
