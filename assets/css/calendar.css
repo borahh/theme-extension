@@ -4,3 +4,7 @@ body div.daterangepicker .calendar-table tbody tr .ends{
     pointer-events: none;
 
 }
+
+.option-date{
+    background-color: rgba(128, 128, 128, 0.2);
+}

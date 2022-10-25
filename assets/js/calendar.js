@@ -98,7 +98,7 @@ const myFunc2 = () =>{
               calender.querySelectorAll('table tbody td').forEach(td =>{
                 if(item.dates.includes(parseInt(td.innerText))) {
 
-                    if(!td.classList.contains('ends')) td.style.backgroundColor = 'rgba(128, 128, 128, 0.2)'
+                    if(!td.classList.contains('ends')) td.classList.add('option-date')
                 }
               })
             }
