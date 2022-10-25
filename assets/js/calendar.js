@@ -33,6 +33,7 @@ const myFunc = () =>{
             return sortedBlockedDates.push({year, month,dates: [parseInt(day)]})
         }
     })
+    console.log(sortedBlockedDates)
 
 
     calenders.forEach(calender =>{
