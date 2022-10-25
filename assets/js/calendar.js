@@ -21,12 +21,11 @@ const myFunc = () =>{
 
     // get blocked dates in json format
     const blockedDates = document.querySelector('#property-availability').getAttribute('data-blocked-dates').split(',')
-    console.log(blockedDates)
     const sortedBlockedDates = []
     blockedDates.forEach(item =>{
         const [year, month, day] = item.split('-')
         if(sortedBlockedDates.length ===0){
-            return sortedOptionalDates.push({year , month, dates: [parseInt(day)]})
+            return sortedBlockedDates.push({year , month, dates: [parseInt(day)]})
         }
         if(sortedBlockedDates.at(-1).year === year && sortedBlockedDates.at(-1).month === month  ){
             return sortedBlockedDates.at(-1).dates.push(parseInt(day))
@@ -34,7 +33,7 @@ const myFunc = () =>{
             return sortedBlockedDates.push({year, month,dates: [parseInt(day)]})
         }
     })
-    console.log(sortedBlockedDates)
+   
 
 
     calenders.forEach(calender =>{
