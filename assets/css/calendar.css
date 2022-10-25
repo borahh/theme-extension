@@ -7,6 +7,5 @@ body div.daterangepicker .calendar-table tbody tr .ends{
 
 .option-date{
     background-color: rgba(255, 151, 82, 0.733);
-    color: white;
     cursor: not-allowed ;
 }
