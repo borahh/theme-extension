@@ -10,5 +10,8 @@ window.addEventListener('load', () =>{
         const [day,month, year] = item.split('-')
         return {year, month, day}
     })
-   console.log(calenders)
+    calenders.forEach(calender =>{
+        const calenderMonth = calender.querySelector('.month-name')
+        console.log(calenderMonth)
+    })
 })
