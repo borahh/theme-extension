@@ -90,8 +90,7 @@ const myFunc2 = () =>{
     const {sortedOptionalDates, sortedBlockedDates} = sortData()
 
     calenders.forEach(async calender =>{
-        const ele =await waitForElm('.month')
-        const [month, year] = ele.innerText.split(' ')
+        const [month, year] = calender.querySelector('.month').innerText.split(' ')
         console.log(month, year)
 
         sortedOptionalDates.forEach(item =>{
@@ -124,8 +123,7 @@ window.addEventListener('load', () =>{
     const observer = new MutationObserver(myFunc)
     const observer2 = new MutationObserver(myFunc2)
     const observeElement1 = document.querySelector('#property-availability')
-    const observeElement2 = document.querySelector('.daterangepicker')
-    // const dateInputs = document.querySelectorAll('#rvr-check-in-rvr_booking_widget-1')
+    const observeElement2 = document.querySelector('body')
     myFunc()
     myFunc2()
     observer.observe(observeElement1, {childList: true, subtree: true })
