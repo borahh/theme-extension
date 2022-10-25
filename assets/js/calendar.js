@@ -65,7 +65,7 @@ const myFunc = () =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
               calender.querySelectorAll('table tbody td').forEach(td =>{
                 if(item.dates.includes(parseInt(td.innerText))) {
-                    td.style.backgroundColor = 'rgba(128, 128, 128, 0.2)'
+                    td.classList.add('option-date')
                 }
               })
             }
