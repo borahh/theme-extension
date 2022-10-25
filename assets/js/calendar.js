@@ -1,4 +1,4 @@
-document.addEventListener('load', () =>{
+window.addEventListener('load', () =>{
     const optionalDates = document.querySelector('#property-availability').getAttribute('data-option-dates')
-console.log(optionalDates)
+    console.log(optionalDates)
 })
