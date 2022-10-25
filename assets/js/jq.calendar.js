@@ -71,7 +71,7 @@ const myFunc2 = () =>{
 window.addEventListener('load', () =>{
     const observer = new MutationObserver(myFunc2)
     const observeElement = document.querySelector('.daterangepicker')
-    myFunc2()
+    // myFunc2()
     observer.observe(observeElement, {childList: true, subtree: true })
 
 })
