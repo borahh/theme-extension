@@ -86,9 +86,14 @@ const myFunc = () =>{
     })
 }
 const myFunc2 = () =>{
+    // fixing someone's mess T_T
+    const ends = document.querySelectorAll('.ends')
+    ends.forEach(item => item.style.backgroundColor = 'transparent')
+    //  fixed
+
     const calenders = document.querySelectorAll('.daterangepicker .calendar-table')
     const {sortedOptionalDates, sortedBlockedDates} = sortData()
-
+    
     calenders.forEach(async calender =>{
         const ele =  await waitForElm(calender.querySelector('.month'))
         const [month, year] =ele.innerText.split(' ')
