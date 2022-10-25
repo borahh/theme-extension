@@ -1,7 +1,7 @@
-const monthNumber = ["january", "february", "march", "spril", "may", "june", "july", "august", "september", "october", "november", "december"]
+// const monthNumber = ["january", "february", "march", "spril", "may", "june", "july", "august", "september", "october", "november", "december"]
 
 
-const myFunc = () =>{
+const myFunc2 = () =>{
     const calenders = document.querySelectorAll('.calendar-table')
 
     // get optional date in json format
@@ -66,10 +66,11 @@ const myFunc = () =>{
         
     })
 }
+
 window.addEventListener('load', () =>{
-    const observer = new MutationObserver(myFunc)
+    const observer = new MutationObserver(myFunc2)
     const observeElement = document.querySelector('.daterangepicker')
-    myFunc()
+    myFunc2()
     observer.observe(observeElement, {childList: true, subtree: true })
 
 })
