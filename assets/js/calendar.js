@@ -32,7 +32,9 @@ window.addEventListener('load', () =>{
         sortedOptionalDates.forEach(item =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
               calender.querySelectorAll('table tbody td').forEach(td =>{
-                console.log(td)
+                if(item.dates.includes(td.innerText)){
+                    td.style.backgroundColor = 'red'
+                }
               })
             }
         })
