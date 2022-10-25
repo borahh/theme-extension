@@ -56,6 +56,7 @@ const myFunc = () =>{
                 console.log(item.dates)
               calender.querySelectorAll('table tbody td').forEach(td =>{
                 if(item.dates.includes(parseInt(td.innerText))) {
+                    td.classList.remove('available')
                     td.classList.add('unavailable')
                 }
               })
@@ -68,6 +69,6 @@ window.addEventListener('load', () =>{
     const observer = new MutationObserver(myFunc)
     const observeElement = document.querySelector('#property-availability')
     myFunc()
-    observer.observe(observeElement, {  childList: true, subtree: true })
+    observer.observe(observeElement, {childList: true, subtree: true })
 
 })
