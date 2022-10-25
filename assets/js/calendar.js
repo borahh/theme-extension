@@ -55,8 +55,8 @@ const myFunc = () =>{
    
  
 
-    calenders.forEach( async calender =>{
-        const [month, year] = await waitForElm('.month').innerText.split(',')
+    calenders.forEach(calender =>{
+        const [month, year] = calender.querySelector('.month-name').innerText.split(',')
 
         sortedOptionalDates.forEach(item =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
@@ -118,8 +118,8 @@ const myFunc2 = () =>{
    
  
 
-    calenders.forEach(calender =>{
-        const [month, year] = calender.querySelector('.month').innerText.split(' ')
+    calenders.forEach(async calender =>{
+        const [month, year] =await waitForElm('.month').innerText.split(' ')
 
         sortedOptionalDates.forEach(item =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
