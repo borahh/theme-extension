@@ -100,7 +100,6 @@ const myFunc2 = () =>{
  
 
     calenders.forEach(calender =>{
-        console.log(calender.querySelector('.month'))
         const [month, year] = calender.querySelector('.month').innerHTML.split(' ')
 
         sortedOptionalDates.forEach(item =>{
