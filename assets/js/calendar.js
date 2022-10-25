@@ -34,7 +34,6 @@ const myFunc = () =>{
         }
     })
    
-    console.log(sortedBlockedDates)
  
 
     calenders.forEach(calender =>{
