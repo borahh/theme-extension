@@ -14,6 +14,6 @@ window.addEventListener('load', () =>{
     })
     calenders.forEach(calender =>{
         const [month, year] = calender.querySelector('.month-name').innerText.split(',')
-        console.log(monthNumber.indexOf(month.toLowerCase()), year)
+        console.log(monthNumber.indexOf(month.toLowerCase()) + 1, year)
     })
 })
