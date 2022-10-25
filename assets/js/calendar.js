@@ -64,7 +64,6 @@ const myFunc = () =>{
     })
 }
 const myFunc2 = () =>{
-    console.log( document.querySelector('.daterangepicker'))
     const calenders = document.querySelectorAll('.calendar-table')
 
     // get optional date in json format
@@ -132,10 +131,9 @@ const myFunc2 = () =>{
 }
 window.addEventListener('load', () =>{
     const observer = new MutationObserver(myFunc)
-    const observer2 = new MutationObserver(myFunc2)
+    const observer2 = new MutationObserver(() => console.log('working'))
     const observeElement1 = document.querySelector('#property-availability')
     const observeElement2 = document.querySelector('.daterangepicker .calendar-table')
-    console.log(observeElement2)
     myFunc()
     observer.observe(observeElement1, {childList: true, subtree: true })
     observer2.observe(observeElement2, {childList:true, subtree: true})
