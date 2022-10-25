@@ -9,12 +9,12 @@ window.addEventListener('load', () =>{
     optionalDates.forEach(item =>{
         const [year, month, day] = item.split('-')
         if(sortedOptionalDates.length ===0){
-            return sortedOptionalDates.push({year , month, dates: [day]})
+            return sortedOptionalDates.push({year , month, dates: [parseInt(day)]})
         }
         if(sortedOptionalDates.at(-1).year === year && sortedOptionalDates.at(-1).month === month  ){
-            return sortedOptionalDates.at(-1).dates.push(day)
+            return sortedOptionalDates.at(-1).dates.push(parseInt(day))
         }else{
-            return sortedOptionalDates.push({year, month,dates: [day]})
+            return sortedOptionalDates.push({year, month,dates: parseInt(day)})
         }
     })
 
@@ -31,8 +31,9 @@ window.addEventListener('load', () =>{
 
         sortedOptionalDates.forEach(item =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
+                console.log(item.dates)
               calender.querySelectorAll('table tbody td').forEach(td =>{
-                if(item.dates.includes(td.innerText)){
+                if(item.dates.includes(parseInt(td.innerText))){
                     td.style.backgroundColor = 'red'
                 }
               })
