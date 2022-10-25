@@ -131,7 +131,7 @@ const myFunc2 = () =>{
 }
 window.addEventListener('load', () =>{
     const observer = new MutationObserver(myFunc)
-    const observer2 = new MutationObserver(() => console.log('working'))
+    const observer2 = new MutationObserver(myFunc2)
     const observeElement1 = document.querySelector('#property-availability')
     const observeElement2 = document.querySelector('body')
     myFunc()
