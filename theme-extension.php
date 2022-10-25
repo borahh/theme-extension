@@ -30,7 +30,7 @@ function my_load_scripts($hook) {
 	
 	wp_enqueue_script( 'calendar', plugins_url( 'assets/js/calendar.js', __FILE__ ), array(), $my_js_ver );
 	wp_enqueue_script( 'calendarjq', plugins_url( 'assets/js/jq.calendar.js', __FILE__ ), array(), $my_jsq_ver );
-	wp_register_style( 'calendarcss', 	plugins_url( 'assets/css/calendar.css', 	 __FILE__ ), false,   $my_css_ver );
+	wp_enqueue_style( 'calendar', 	plugins_url( 'assets/css/calendar.css', 	 __FILE__ ), false,   $my_css_ver );
 
 }
 add_action('wp_enqueue_scripts', 'my_load_scripts');
