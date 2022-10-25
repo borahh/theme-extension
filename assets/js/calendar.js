@@ -34,11 +34,11 @@ const myFunc = () =>{
         }
     })
    
+    console.log(sortedBlockedDates)
  
 
     calenders.forEach(calender =>{
         const [month, year] = calender.querySelector('.month-name').innerText.split(',')
-        // console.log(monthNumber.indexOf(month.toLowerCase()) + 1, year.replace(" ", ''))
 
         sortedOptionalDates.forEach(item =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
@@ -50,6 +50,7 @@ const myFunc = () =>{
               })
             }
         })
+
         sortedBlockedDates.forEach(item =>{
             if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
                 console.log(item.dates)
