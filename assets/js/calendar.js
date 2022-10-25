@@ -157,10 +157,7 @@ window.addEventListener('load', () =>{
     myFunc()
     observer.observe(observeElement1, {childList: true, subtree: true })
    
-    dateInputs.forEach(item =>{
-         item.addEventListener('click', () =>{
+ 
             observer2.observe(observeElement2, {childList:true, subtree: true})
-         })
-    })
 
 })
