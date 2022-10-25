@@ -153,11 +153,10 @@ window.addEventListener('load', () =>{
     const observer2 = new MutationObserver(myFunc2)
     const observeElement1 = document.querySelector('#property-availability')
     const observeElement2 = document.querySelector('body')
-    const dateInputs = document.querySelectorAll('#rvr-check-in-rvr_booking_widget-1')
+    // const dateInputs = document.querySelectorAll('#rvr-check-in-rvr_booking_widget-1')
     myFunc()
+    myFunc2()
     observer.observe(observeElement1, {childList: true, subtree: true })
-   
- 
-            observer2.observe(observeElement2, {childList:true, subtree: true})
+    observer2.observe(observeElement2, {childList:true, subtree: true})
 
 })
