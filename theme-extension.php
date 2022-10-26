@@ -37,4 +37,26 @@ function my_load_scripts($hook) {
 
 }
 add_action('wp_enqueue_scripts', 'my_load_scripts');
+
+add_filter( 'rwmb_meta_boxes', 'your_prefix_register_meta_boxes' );
+
+function your_prefix_register_meta_boxes( $meta_boxes ) {
+    $prefix = '';
+
+    $meta_boxes[] = [
+        'title'   => esc_html__( 'Untitled Field Group', 'online-generator' ),
+        'id'      => 'untitled',
+        'context' => 'normal',
+        'post_types' => ['post'],
+        'fields'  => [
+            [
+                'type' => 'button',
+                'name' => esc_html__( 'Button', 'online-generator' ),
+                'id'   => $prefix . 'button_ydsxeommds',
+            ],
+        ],
+    ];
+
+    return $meta_boxes;
+}
 ?>
