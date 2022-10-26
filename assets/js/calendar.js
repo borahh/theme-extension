@@ -40,7 +40,7 @@ const sortData = () =>{
     const blockedDates = document.querySelector('#property-availability').getAttribute('data-blocked-dates').split(',')
     const sortedBlockedDates = []
     blockedDates.forEach(item =>{
-        const [day, month, year] = item.split('-')
+        const [year, month, day] = item.split('-')
         if(sortedBlockedDates.length ===0){
             return sortedBlockedDates.push({year , month, dates: [parseInt(day)]})
         }
