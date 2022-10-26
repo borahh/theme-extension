@@ -44,18 +44,32 @@ function your_prefix_register_meta_boxes( $meta_boxes ) {
     $prefix = '';
 
     $meta_boxes[] = [
-        'title'   => esc_html__( 'Untitled Field Group', 'online-generator' ),
-        'id'      => 'untitled',
-        'context' => 'normal',
-        'post_types' => ['post'],
-        'fields'  => [
-            [
-                'type' => 'button',
-                'name' => esc_html__( 'Button', 'online-generator' ),
-                'id'   => $prefix . 'button_ydsxeommds',
-            ],
-        ],
-    ];
+      'title'  => 'Multi-level nested groups',
+      'fields' => [
+          [
+              'id'     => 'group',
+              'type'   => 'group',
+              'fields' => [
+                  [
+                      'name' => 'Text',
+                      'id'   => 'text',
+                  ],
+                  [
+                      'name'   => 'Sub group',
+                      'id'     => 'sub_group',
+                      'type'   => 'group',
+                      'fields' => [
+                          // Normal field (cloned)
+                          [
+                              'name'  => 'Sub text',
+                              'id'    => 'sub_text',
+                          ],
+                      ],
+                  ],
+              ],
+          ],
+      ],
+  ];
 
     return $meta_boxes;
 }
