@@ -16,13 +16,12 @@ $xxl: 1800px;
 
 }
 #prices{
-    width: 90%;
-    margin: 0 auto;
     font-family:'Rubik', sans-serif;
     text-transform: capitalize;
 
     table,thead,tbody,tr,td{
         display: block;
+        border: none !important;
     }
 
     table{

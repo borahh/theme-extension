@@ -6,13 +6,12 @@
 }
 
 #prices {
-  width: 90%;
-  margin: 0 auto;
   font-family: "Rubik", sans-serif;
   text-transform: capitalize;
 }
 #prices table, #prices thead, #prices tbody, #prices tr, #prices td {
   display: block;
+  border: none !important;
 }
 #prices table {
   border: none !important;
