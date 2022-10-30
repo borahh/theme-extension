@@ -134,6 +134,18 @@ window.addEventListener('load', () =>{
     observer.observe(observeElement1, {childList: true, subtree: true })
     observer2.observe(observeElement2, {childList:true, subtree: true})
 
+//    prices table
+const perDayPrice = document.querySelectorAll('.per_day_price')
+const perWeekPrice = document.querySelectorAll('.per_week_price')
+
+ perDayPrice.forEach(item =>{
+    const element = '<span class = "heavy">Per Day</span>'
+    item.innerHTML += element
+ })
+
+ perWeekPrice.forEach(item =>{
+    const element = '<span class = "heavy">Per Week</span>'
+    item.innerHTML += element
+ })
 })
 
-console.log('this is js file')

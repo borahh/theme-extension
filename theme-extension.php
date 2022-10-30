@@ -28,8 +28,6 @@ function my_load_scripts($hook) {
 	$my_js_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/calendar.js' ));
 	$my_jsq_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/jq.calendar.js' ));
 	$my_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/calendar.css' ));
-	$my_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/priceTable.css' ));
-	$my_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/priceTable.js' ));
 	// $UNIQUE_VAR_HERE = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/calendar.css' ));
 	
 	wp_enqueue_script( 'calendar', plugins_url( 'assets/js/calendar.js', __FILE__ ), array(), $my_js_ver );
