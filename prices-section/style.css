@@ -9,7 +9,7 @@
   font-family: "Rubik", sans-serif;
   text-transform: capitalize;
 }
-#prices table, #prices thead, #prices tbody, #prices tr, #prices td {
+#prices table, #prices thead, #prices tbody, #prices tr, #prices td, #prices th {
   display: block;
   border: none !important;
 }
