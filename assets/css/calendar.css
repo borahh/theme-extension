@@ -64,6 +64,7 @@ body div.daterangepicker .calendar-table tbody tr .ends{
 }
 #prices thead th {
   display: none;
+  text-align: center;
 }
 #prices .room_type_selector_container {
   max-width: 300px;
