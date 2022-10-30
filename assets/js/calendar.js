@@ -135,3 +135,5 @@ window.addEventListener('load', () =>{
     observer2.observe(observeElement2, {childList:true, subtree: true})
 
 })
+
+console.log('this is js file')
