@@ -151,7 +151,9 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
 //  currency change
  const currencySelector = document.querySelector('select[name = "currencyType"]')
  const currencySwitcherList = document.querySelectorAll("#currency-switcher-list > li")
+
  currencySelector.value = 'USD'
+
  currencySelector.addEventListener('change', () =>{
      currencySwitcherList.forEach(li=>{
        if(li.dataset.currencyCode === currencySelector.value){
@@ -159,5 +161,14 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
        }
      })
  })
+
+//  room filter
+  const pricesTableRows = document.querySelectorAll('#prices > table> tbody > tr')
+
+  pricesTableRows.forEach(row =>{
+     if(row.dataset.room != 1){
+         row.style.display = 'none'
+     }
+  })
 })
 
