@@ -177,7 +177,7 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
         if(row.dataset.room != roomSelector.value){
             row.style.display = 'none'
         }else{
-            row.style.display = 'block'
+            row.style.display = 'grid'
         }
      })
   })

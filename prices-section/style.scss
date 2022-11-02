@@ -45,7 +45,8 @@ $xxl: 1800px;
         tr:nth-child(even){
             background: #f7f7f7 ;
         }
-        tr{
+        tr{ 
+            display: grid;
             padding: 12px;
             padding-bottom: 16px;
         }
