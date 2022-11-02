@@ -150,6 +150,8 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
 
 //  currency change
  const currencySelector = document.querySelector('select[name = "currencyType"]')
- console.log(currencySelector)
+ currencySelector.addEventListener('input', () =>{
+    console.log(currencySelector.value)
+ })
 })
 
