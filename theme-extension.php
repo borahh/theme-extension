@@ -17,6 +17,7 @@
  * For custom fields : http://imzbswh.cluster028.hosting.ovh.net/islandchic/wp-admin/plugin-editor.php?file=realhomes-vacation-rentals%2Fadmin%2Frvr-booking-post-type.php&plugin=realhomes-vacation-rentals%2Frealhomes-vacation-rentals.php
  * For availability calculator front-end : http://imzbswh.cluster028.hosting.ovh.net/islandchic/wp-admin/theme-editor.php?file=assets%2Fmodern%2Fpartials%2Fproperty%2Fsingle%2Frvr%2Favailability-calendar.php&theme=realhomes
  * Property meta fieds:  https://icvillastbarth.com/wp-admin/plugin-editor.php?file=realhomes-vacation-rentals%2Fadmin%2Frvr-property-metaboxes-config.php&plugin=realhomes-vacation-rentals%2Frealhomes-vacation-rentals.php
+ * Seasonal Prices : https://icvillastbarth.com/wp-admin/theme-editor.php?file=assets%2Fmodern%2Fpartials%2Fproperty%2Fsingle%2Frvr%2Fseasonal-prices.php&theme=realhomes
  **/
 
 /**
