@@ -164,11 +164,23 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
 
 //  room filter
   const pricesTableRows = document.querySelectorAll('#prices > table> tbody > tr')
+  const roomSelector = document.querySelector('select[name = "bedrooms"]')
 
   pricesTableRows.forEach(row =>{
      if(row.dataset.room != 1){
          row.style.display = 'none'
      }
   })
+
+  roomSelector.addEventListener('change', () =>{
+    pricesTableRows.forEach(row =>{
+        if(row.dataset.room != roomSelector.value){
+            row.style.display = 'none'
+        }else{
+            row.style.display = 'block'
+        }
+     })
+  })
+
 })
 
