@@ -151,10 +151,12 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
 //  currency change
  const currencySelector = document.querySelector('select[name = "currencyType"]')
  const currencySwitcherList = document.querySelectorAll("#currency-switcher-list > li")
- 
+
  currencySelector.addEventListener('change', () =>{
      currencySwitcherList.forEach(li=>{
-        console.log(li.dataset.currencyCode)
+       if(li.dataset.currencyCode === currencySelector.value){
+          li.click()
+       }
      })
  })
 })
