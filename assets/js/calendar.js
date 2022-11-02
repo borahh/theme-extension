@@ -147,5 +147,8 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
     const element = '<span class = "heavy">Per Week</span>'
     item.innerHTML += element
  })
+
+//  currency change
+ const currencySelector = document.querySelector('select[type = "currencyType"]')
 })
 
