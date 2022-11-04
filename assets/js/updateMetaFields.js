@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
     $('body').on('keyup', function (e) {
        const id = $(e.target).attr('id');
       if (!id) return;
-      const matches = id.match(/rvr_seasonal_plans_(\d*)_rvr_seasonal_plans_group_(\d*)_rvr_plan_night_price/);
+      const matches = id.match(/rvr_seasonal_plans_(\d*)_rvr_seasonal_plans_group_(\d*)_rvr_plan_week_price/);
       if (!matches) return;
       const num = parseInt(matches[1]);
       if (isNaN(num)) return;
