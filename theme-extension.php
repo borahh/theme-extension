@@ -40,11 +40,8 @@ function my_load_scripts($hook) {
 add_action('wp_enqueue_scripts', 'my_load_scripts');
 
 
-
-add_action( 'rwmb_rvr_seasonal_plans_group_after_save_post', function( $object_id ) {
-    $group = $_POST['rvr_seasonal_plans_group'];
-    $week= $group['rvr_plan_week_price'];
-        update_post_meta( $object_id, $group['rvr_plan_night_price'], $week );
-    
-} );
+add_filter( "rwmb_rvr_seasonal_plans_group_value", function( $new, $field, $old ) {
+    $new['rvr_plan_night_price'] = $new['rvr_plan_week_price'];
+    return $new;
+}, 99, 3 );
 ?>
