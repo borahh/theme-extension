@@ -39,39 +39,7 @@ function my_load_scripts($hook) {
 }
 add_action('wp_enqueue_scripts', 'my_load_scripts');
 
-add_filter( 'rwmb_meta_boxes', 'your_prefix_register_meta_boxes' );
-
-function your_prefix_register_meta_boxes( $meta_boxes ) {
-    $prefix = '';
-
-    $meta_boxes[] = [
-      'title'  => 'Multi-level nested groups',
-      'fields' => [
-          [
-              'id'     => 'group',
-              'type'   => 'group',
-              'fields' => [
-                  [
-                      'name' => 'Text',
-                      'id'   => 'text',
-                  ],
-                  [
-                      'name'   => 'Sub group',
-                      'id'     => 'sub_group',
-                      'type'   => 'group',
-                      'fields' => [
-                          // Normal field (cloned)
-                          [
-                              'name'  => 'Sub text',
-                              'id'    => 'sub_text',
-                          ],
-                      ],
-                  ],
-              ],
-          ],
-      ],
-  ];
-
-    return $meta_boxes;
-}
+add_action( 'rwmb_rvr_plan_week_price_after_save_field', function ( $null, $field, $new, $old, $object_id ) {
+        update_post_meta( $object_id, 'rvr_plan_date_price', "HI" );
+}, 10, 5 );
 ?>
