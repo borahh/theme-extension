@@ -49,6 +49,6 @@ function admin_load_scripts($hook) {
 	// wp_enqueue_style( 'UNIQUE_NAME_HERE', 	plugins_url( 'assets/css/calendar.css', 	 __FILE__ ), false,   $UNIQUE_VAR_HERE );
 
 }
-add_action('admin_enqueue_scripts', 'my_load_scripts');
+add_action('admin_enqueue_scripts', 'admin_load_scripts');
 
 ?>
