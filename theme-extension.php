@@ -27,12 +27,10 @@ function my_load_scripts($hook) {
 
 	// create my own version codes
 	$my_js_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/calendar.js' ));
-	$my_jsq_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/jq.calendar.js' ));
 	$my_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/calendar.css' ));
 	// $UNIQUE_VAR_HERE = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/calendar.css' ));
 	
 	wp_enqueue_script( 'calendar', plugins_url( 'assets/js/calendar.js', __FILE__ ), array(), $my_js_ver );
-	wp_enqueue_script( 'calendarjq', plugins_url( 'assets/js/jq.calendar.js', __FILE__ ), array(), $my_jsq_ver );
 	wp_enqueue_style( 'calendar', 	plugins_url( 'assets/css/calendar.css', 	 __FILE__ ), false,   $my_css_ver );
 	// wp_enqueue_style( 'UNIQUE_NAME_HERE', 	plugins_url( 'assets/css/calendar.css', 	 __FILE__ ), false,   $UNIQUE_VAR_HERE );
 
@@ -40,5 +38,17 @@ function my_load_scripts($hook) {
 add_action('wp_enqueue_scripts', 'my_load_scripts');
 
 
+
+function admin_load_scripts($hook) {
+
+	// create my own version codes
+	$my_umf_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/updateMetaFields.js' ));
+	// $UNIQUE_VAR_HERE = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/calendar.css' ));
+	
+	wp_enqueue_script( 'updateMetaFields', plugins_url( 'assets/js/updateMetaFields.js', __FILE__ ), array('jquery'), $my_umf_ver );
+	// wp_enqueue_style( 'UNIQUE_NAME_HERE', 	plugins_url( 'assets/css/calendar.css', 	 __FILE__ ), false,   $UNIQUE_VAR_HERE );
+
+}
+add_action('admin_enqueue_scripts', 'my_load_scripts');
 
 ?>
