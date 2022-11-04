@@ -39,7 +39,12 @@ function my_load_scripts($hook) {
 }
 add_action('wp_enqueue_scripts', 'my_load_scripts');
 
-add_action( 'rwmb_rvr_plan_week_price_after_save_field', function ( $null, $field, $new, $old, $object_id ) {
-        update_post_meta( $object_id, 'rvr_plan_date_price', "HI" );
-}, 10, 5 );
+
+
+add_action( 'rwmb_rvr_seasonal_plans_group_after_save_post', function( $object_id ) {
+    if ( isset( $_POST['rvr_plan_week_price'] ) ) {
+        $value = $_POST['rvr_plan_week_price'] . '9';
+        update_post_meta( $object_id, 'rvr_plan_night_price', $value );
+    }
+} );
 ?>
