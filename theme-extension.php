@@ -42,8 +42,9 @@ add_action('wp_enqueue_scripts', 'my_load_scripts');
 
 
 add_action( 'rwmb_rvr_seasonal_plans_group_after_save_post', function( $object_id ) {
-    if ( isset( $_POST['rvr_plan_week_price'] ) ) {
-        update_post_meta( $object_id, 'rvr_plan_night_price', $_POST['rvr_plan_week_price'] );
-    }
+    $group = $_POST['rvr_seasonal_plans_group'];
+    $week= $group['rvr_plan_week_price'];
+        update_post_meta( $object_id, $group['rvr_plan_night_price'], $week );
+    
 } );
 ?>
