@@ -40,9 +40,5 @@ function my_load_scripts($hook) {
 add_action('wp_enqueue_scripts', 'my_load_scripts');
 
 
-add_filter( "rwmb_rvr_seasonal_plans_value", function( $new, $field, $old ) {
-    $new['rvr_season_name'] = "XYZ";
-    return $new;
-}, 99, 3 );
 
 ?>
