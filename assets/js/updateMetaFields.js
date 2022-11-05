@@ -10,6 +10,6 @@ jQuery(document).ready(function($) {
     if (!target.length) return;
     const val = parseInt(e.target.value);
     console.log(val);
-    target.eq(0).val(isNaN(val) ? 0 : val*val);
+    target.eq(0).val(isNaN(val) ? 0 : Math.round(val/7));
   })
 });
