@@ -181,14 +181,13 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
   })
 
 // currency convertion and calculation
-const checkIn = document.querySelector('input[name = "check_in"]')
-const checkOut = document.querySelector('input[name = "check_out"]')
+// const checkIn = document.querySelector('input[name = "check_in"]')
+// const checkOut = document.querySelector('input[name = "check_out"]')
 const availablePlans = JSON.parse(document.querySelector('#AvailablePlans').dataset.plans)
 console.log(availablePlans)
-
-checkIn.addEventListener('input', () =>{
-  console.log('working')
-})
+const ranges = document.querySelector('.datarangepicker .ranges')
+const newRanges = ranges.cloneNode(true)
+ranges.parentNode.replaceChild(newRanges, ranges)
 
 })
 
