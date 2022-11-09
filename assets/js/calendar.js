@@ -184,7 +184,7 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
 const checkIn = document.querySelector('input[name = "check_in"]')
 const checkOut = document.querySelector('input[name = "check_out"]')
 const availablePlans = document.querySelector('#AvailablePlans')
-console.log(availablePlans)
+console.log(availablePlans.dataset.plans)
 
 checkIn.addEventListener('change', () =>{
   console.log('working')
