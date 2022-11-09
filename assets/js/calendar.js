@@ -183,7 +183,9 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
 // currency convertion and calculation
 const checkIn = document.querySelector('input[name = "check_in"]')
 const checkOut = document.querySelector('input[name = "check_out"]')
-console.log(checkIn, checkOut)
+const availablePlans = document.querySelector('availbableplans')
+console.log(availablePlans)
+
 
 })
 
