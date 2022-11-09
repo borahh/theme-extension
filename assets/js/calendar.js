@@ -186,7 +186,7 @@ const checkOut = document.querySelector('input[name = "check_out"]')
 const availablePlans = JSON.parse(document.querySelector('#AvailablePlans').dataset.plans)
 console.log(availablePlans)
 
-checkIn.addEventListener('change', () =>{
+checkIn.addEventListener('input', () =>{
   console.log('working')
 })
 
