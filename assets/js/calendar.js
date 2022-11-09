@@ -186,7 +186,7 @@ const checkOut = document.querySelector('input[name = "check_out"]')
 const availablePlans = document.querySelector('availableplans')
 console.log(availablePlans)
 
-checkIn.addEventListener('input', () =>{
+checkIn.addEventListener('change', () =>{
   console.log('working')
 })
 
