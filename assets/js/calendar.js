@@ -19,7 +19,16 @@ function waitForElm(selector) {
         });
     });
 }
-
+function recreateNode(el, withChildren) {
+    if (withChildren) {
+      el.parentNode.replaceChild(el.cloneNode(true), el);
+    }
+    else {
+      var newEl = el.cloneNode(false);
+      while (el.hasChildNodes()) newEl.appendChild(el.firstChild);
+      el.parentNode.replaceChild(newEl, el);
+    }
+  }
 const sortData = () =>{
     // get optional date in json format
     const optionalDates = document.querySelector('#property-availability').getAttribute('data-option-dates').split(',')
@@ -185,10 +194,8 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
 // const checkOut = document.querySelector('input[name = "check_out"]')
 const availablePlans = JSON.parse(document.querySelector('#AvailablePlans').dataset.plans)
 const form = document.querySelector('.rvr-booking-form')
-form.parentNode.replaceChild(form.cloneNode(false), form)
-const newFrom = document.querySelector('.rvr-booking-form')
-newFrom.appendChild(form.childNodes)
 
+recreateNode(form, false)
 
 
 })
