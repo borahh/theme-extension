@@ -185,7 +185,7 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
 // const checkOut = document.querySelector('input[name = "check_out"]')
 const availablePlans = JSON.parse(document.querySelector('#AvailablePlans').dataset.plans)
 const form = document.querySelector('.rvr-booking-form')
-form.parentNode.removeChild(form.cloneNode(false), form)
+form.parentNode.replaceChild(form.cloneNode(false), form)
 
 
 
