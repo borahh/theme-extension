@@ -187,7 +187,7 @@ const availablePlans = JSON.parse(document.querySelector('#AvailablePlans').data
 const form = document.querySelector('.rvr-booking-form')
 form.parentNode.replaceChild(form.cloneNode(false), form)
 const newFrom = document.querySelector('.rvr-booking-form')
-newFrom.innerHTML  =  form.innerHTML
+newFrom.append(form.childNodes)
 
 
 
