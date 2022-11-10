@@ -190,12 +190,13 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
   })
 
 // currency convertion and calculation
-// const checkIn = document.querySelector('input[name = "check_in"]')
-// const checkOut = document.querySelector('input[name = "check_out"]')
+const noOfRooms = document.querySelector('select[name="adult"]')
 const availablePlans = JSON.parse(document.querySelector('#AvailablePlans').dataset.plans)
 const form = document.querySelector('.rvr-booking-form')
 
-recreateNode(form, false)
+noOfRooms.addEventListener('change', () =>{
+    console.log(noOfRooms.value)
+})
 
 
 })
