@@ -190,19 +190,19 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
   })
 
 // currency convertion and calculation
-const noOfRooms = document.querySelector('select[name="adult"]')
-const availablePlans = JSON.parse(document.querySelector('#AvailablePlans').dataset.plans)
-const form = document.querySelector('.rvr-booking-form')
-const pricePerNight = document.querySelector('.price-per-night')
-pricePerNight.value = availablePlans[0][1]
+// const noOfRooms = document.querySelector('select[name="adult"]')
+// const availablePlans = JSON.parse(document.querySelector('#AvailablePlans').dataset.plans)
+// const form = document.querySelector('.rvr-booking-form')
+// const pricePerNight = document.querySelector('.price-per-night')
+// pricePerNight.value = availablePlans[0][1]
 
-noOfRooms.addEventListener('change', () =>{
-    availablePlans.forEach(item =>{
-        if(noOfRooms.value == item[0]){
-           pricePerNight.value = item[1]
-        }
-    })
-})
+// noOfRooms.addEventListener('change', () =>{
+//     availablePlans.forEach(item =>{
+//         if(noOfRooms.value == item[0]){
+//            pricePerNight.value = item[1]
+//         }
+//     })
+// })
 
 
 })
