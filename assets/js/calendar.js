@@ -109,7 +109,6 @@ const myFunc2 = () =>{
 
                     if(!td.classList.contains('ends')) {
                         td.classList.add('option-date')
-                        td.classList.remove('available')
                     }
                 }
               })
