@@ -89,6 +89,7 @@ body div.daterangepicker .calendar-table tbody tr .ends{
   #prices table thead th {
     display: inline-block;
     color: #444444;
+    text-align: center;
   }
   #prices table td {
     display: inline-block;
