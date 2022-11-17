@@ -48,9 +48,7 @@ body div.daterangepicker .calendar-table tbody tr .ends{
   align-items: center;
   padding-top: 12px;
 }
-#prices tbody tr:nth-child(even) {
-  background: #f7f7f7;
-}
+
 #prices tbody tr {
   display: grid;
   padding: 12px;
