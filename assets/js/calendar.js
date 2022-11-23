@@ -133,7 +133,7 @@ const myFunc2 = () =>{
     })
 }
 
-const svgShape =`<svg  viewBox="0 0 599 1197" fill="none" xmlns="http://www.w3.org/2000/svg">
+const svgShape =`<svg style = "display:none"  viewBox="0 0 599 1197" fill="none" xmlns="http://www.w3.org/2000/svg">
 <clipPath id = 'svgShape'>
 <path d="M598.5 0.5H0.5V598.5V1196.5H598.5C598.5 1196.5 25.9468 1196.5 25.9468 598.5C25.9468 0.5 598.5 0.5 598.5 0.5Z" fill="#D9D9D9"/>
 </clipPath>
