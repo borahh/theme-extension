@@ -18,7 +18,7 @@ left:0;
 height:100%;
 width: 100%;
 background: white;
-clip-path: path("M598.5 0.5H0.5V598.5V1196.5H598.5C598.5 1196.5 25.9468 1196.5 25.9468 598.5C25.9468 0.5 598.5 0.5 598.5 0.5Z" at 0 0 );
+clip-path: circle();
 }
 .option-date{
     background-color: rgba(255, 151, 82, 0.733);
