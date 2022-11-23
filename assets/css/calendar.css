@@ -23,6 +23,7 @@ body div.daterangepicker .calendar-table tbody tr .start-date:after{
    background-image: url('../shape.svg');
    background-size: contain;
    background-repeat: no-repeat;
+   border: none !important;
 }
 body div.daterangepicker .calendar-table tbody tr .end-date:after{
    content: ' ';
@@ -35,11 +36,12 @@ body div.daterangepicker .calendar-table tbody tr .end-date:after{
    background-size: contain;
    background-repeat: no-repeat;
    transform: scaleX(-1);
+   border: none !important;
 }
 div.daterangepicker td.in-range:not(.active,.ends){
   background-color: black !important;
   color:white;
-  border: none !important;
+  
 }
 .option-date{
     background-color: rgba(255, 151, 82, 0.733);
