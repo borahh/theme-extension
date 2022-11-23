@@ -8,7 +8,7 @@ body div.daterangepicker .calendar-table tbody tr .start-date{
   position: relative;
 }
 body div.daterangepicker .calendar-table tbody tr .start-date:before{
-content: "url(../shape.svg)";
+content: url(../shape.svg);
 position: absolute;
 top: 0;
 left:0;
