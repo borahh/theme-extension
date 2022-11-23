@@ -140,7 +140,7 @@ const svgShape =`<svg style = "display:none"  viewBox="0 0 599 1197" fill="none"
 </svg>`
 
 window.addEventListener('load', () =>{
-    document.body.insertAdjacentElement('beforeend', svgShape)
+    document.querySelector('body').insertAdjacentElement('beforeend', svgShape)
     const observer = new MutationObserver(myFunc)
     const observer2 = new MutationObserver(myFunc2)
     const observeElement1 = document.querySelector('#property-availability')
