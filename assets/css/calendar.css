@@ -7,11 +7,11 @@ body div.daterangepicker .calendar-table tbody tr .ends{
 body div.daterangepicker .calendar-table tbody tr .start-date{
   position: relative !important;
 }
-body div.daterangepicker .calendar-table tbody tr .off:before{
-  display: none;
+body div.daterangepicker .calendar-table tbody tr .off{
+  clip-path: none;
 }
 body div.daterangepicker .calendar-table tbody tr .start-date{
-clip-path: circle();
+ clip-path: path('M598.5 0.5H0.5V598.5V1196.5H598.5C598.5 1196.5 25.9468 1196.5 25.9468 598.5C25.9468 0.5 598.5 0.5 598.5 0.5Z');
 }
 .option-date{
     background-color: rgba(255, 151, 82, 0.733);
