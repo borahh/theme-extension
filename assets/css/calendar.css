@@ -11,7 +11,6 @@ body div.daterangepicker .calendar-table tbody tr .off:before{
   display: none;
 }
 body div.daterangepicker .calendar-table tbody tr .start-date{
-
 clip-path: circle();
 }
 .option-date{
