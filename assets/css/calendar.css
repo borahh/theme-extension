@@ -4,6 +4,9 @@ body div.daterangepicker .calendar-table tbody tr .ends{
     pointer-events: none;
 
 }
+body div.daterangepicker .calendar-table tbody tr .start-date{
+  position: relative;
+}
 body div.daterangepicker .calendar-table tbody tr .start-date:before{
 content: "url(../shape.svg)";
 position: absolute;
