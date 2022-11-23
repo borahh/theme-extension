@@ -28,7 +28,7 @@ body div.daterangepicker .calendar-table tbody tr .end-date:after{
    content: ' ';
    position: absolute;
    top:0;
-   left:0px;
+   right:0px;
    height: 100%;
    width: 100%;
    background-image: url('../shape.svg');
