@@ -138,7 +138,7 @@ const svgShape =`<svg id = 'svgShape' height = '100%' width = '100%'  viewBox="0
 </svg>`
 
 window.addEventListener('load', () =>{
-    document.body.innerHtml += svgShape
+    document.body.innerHTML += svgShape
     const observer = new MutationObserver(myFunc)
     const observer2 = new MutationObserver(myFunc2)
     const observeElement1 = document.querySelector('#property-availability')
