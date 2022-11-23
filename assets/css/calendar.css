@@ -43,6 +43,12 @@ div.daterangepicker td.in-range:not(.active,.ends){
   color:white;
   
 }
+.daterangepicker .calendar-table td{
+  border: none !important;
+}
+td{
+  border: none !important;
+}
 .option-date{
     background-color: rgba(255, 151, 82, 0.733);
     color: white;
