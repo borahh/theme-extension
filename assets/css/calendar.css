@@ -8,10 +8,16 @@ body div.daterangepicker .calendar-table tbody tr .start-date{
   position: relative !important;
 }
 body div.daterangepicker .calendar-table tbody tr .off{
-  clip-path: none;
+
 }
-body div.daterangepicker .calendar-table tbody tr .start-date{
- clip-path: url('#svgShape');
+body div.daterangepicker .calendar-table tbody tr .start-date:after{
+   content: url('../shape.svg');
+   position: absolute;
+   top:0;
+   left:0;
+   display: grid;
+   height: 100%;
+   width: 100%;
 }
 .option-date{
     background-color: rgba(255, 151, 82, 0.733);
