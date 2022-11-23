@@ -15,9 +15,6 @@ body div.daterangepicker .calendar-table tbody tr .start-date:after{
    position: absolute;
    top:0;
    left:0;
-   display: flex;
-   align-items: center;
-   overflow: hidden;
    height: 100%;
    max-width: 100%;
    width: 100%;
