@@ -36,6 +36,10 @@ body div.daterangepicker .calendar-table tbody tr .end-date:after{
    background-repeat: no-repeat;
    transform: scaleX(-1);
 }
+div.daterangepicker td.in-range:not(.active,.ends){
+  background: black;
+  color:white;
+}
 .option-date{
     background-color: rgba(255, 151, 82, 0.733);
     color: white;
