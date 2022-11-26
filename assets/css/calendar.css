@@ -156,9 +156,11 @@ td{
   }
 }
 
+
 #page_nav ul{
   display: flex;
-  overflow-x: scroll
+  overflow-x: auto;
+  padding: 20px 0;
 }
 #page_nav ul li{
   flex-shrink: 0;
