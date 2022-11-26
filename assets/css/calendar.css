@@ -181,6 +181,6 @@ td{
   border-bottom: 2px solid black;
 }
 
-body{
+html{
   scroll-behavior: smooth;
 }
