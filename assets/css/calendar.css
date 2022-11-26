@@ -31,6 +31,7 @@ div.daterangepicker td.in-range:not(.active,.ends){
 }
 .daterangepicker .calendar-table td{
   border: none !important;
+  height: auto;
 }
 td{
   border: none !important;
