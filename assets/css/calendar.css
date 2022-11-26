@@ -4,16 +4,33 @@ body div.daterangepicker .calendar-table tbody tr .ends{
     pointer-events: none;
 
 }
-
-body div.daterangepicker .calendar-table tbody tr .start-date:not(.off, .ends){
+body div.daterangepicker .calendar-table tbody tr .start-date{
+   position: relative;
     background-color: transparent !important;
+}
+body div.daterangepicker .calendar-table tbody tr .end-date{
+ position: relative;
+  background-color: transparent !important;
+}
+body div.daterangepicker .calendar-table tbody tr .start-date:not(.off, .ends)::after{
+
+    position: absolute ;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
    background-image: url('../start.svg');
    background-size: contain;
    background-repeat: no-repeat;
    border: none !important;
 }
-body div.daterangepicker .calendar-table tbody tr .end-date:not(.off,.ends){
-   background-color: transparent !important;
+body div.daterangepicker .calendar-table tbody tr .end-date:not(.off,.ends)::after{
+
+   position: absolute;
+   top:0;
+   left: 0;
+   width: 100%;
+   height: 100%;
    background-image: url('../end.svg');
    background-size: contain;
    background-repeat: no-repeat;
