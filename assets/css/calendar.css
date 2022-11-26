@@ -168,6 +168,7 @@ td{
 }
 #page_nav ul li{
   flex-shrink: 0;
+  display: block;
 }
 #page_nav ul li a {
   padding: 20px 10px;
