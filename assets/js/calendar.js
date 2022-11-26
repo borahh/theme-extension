@@ -192,7 +192,7 @@ const intersectionObserver = new IntersectionObserver((entries) =>{
             link.classList.remove('active')
         }
      })
-}, {rootMargin: '100px 100px 0 0'})
+}, {rootMargin: '20% 20% 0% 0%', threshold: 0.5})
 
 const navLinks = [
     {id:'#property-content-section-content', name: 'description'},
