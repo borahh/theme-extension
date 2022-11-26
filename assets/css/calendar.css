@@ -164,6 +164,17 @@ td{
  
   margin-top: 40px;
 }
+#page_nav .left, #page_nav .right{
+  position: absolute;
+  width: 20px;
+  top: 0;
+}
+#page_nav .left{
+  left: 0;
+}
+#page_nav .right{
+  right:0,
+}
 #page_nav ul{
   display: flex;
   overflow-x: auto;
