@@ -12,8 +12,8 @@ body div.daterangepicker .calendar-table tbody tr .end-date{
  position: relative;
   background-color: transparent !important;
 }
-body div.daterangepicker .calendar-table tbody tr .start-date::after{
-
+body div.daterangepicker .calendar-table tbody tr .start-date:not(.off, .ends)::after{
+ content: ' ';
     position: absolute ;
     top:0;
     left: 0;
@@ -24,8 +24,8 @@ body div.daterangepicker .calendar-table tbody tr .start-date::after{
    background-repeat: no-repeat;
    border: none !important;
 }
-body div.daterangepicker .calendar-table tbody tr .end-date::after{
-
+body div.daterangepicker .calendar-table tbody tr .end-date:not(.off,.ends)::after{
+ content: ' ';
    position: absolute;
    top:0;
    left: 0;
