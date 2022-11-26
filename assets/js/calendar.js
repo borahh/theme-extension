@@ -196,6 +196,7 @@ rhPage.insertAdjacentHTML("afterbegin",pageNav)
 
 document.body.setAttribute('data-bs-spy', 'scroll')
 document.body.setAttribute('data-bs-target', '#page_nav')
+document.body.setAttribute('tabindex', '0')
 
 })
 
