@@ -156,3 +156,17 @@ td{
   }
 }
 
+#page_nav ul{
+  display: flex;
+  overflow-x: scroll
+}
+#page_nav ul li{
+  flex-shrink: 0;
+}
+#page_nav ul li a {
+  padding: 5px;
+}
+#page_nave ul li .active{
+  border-bottom: 2px solid black;
+  box-sizing: content-box;
+}
