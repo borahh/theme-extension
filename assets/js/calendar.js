@@ -185,7 +185,7 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
 const intersectionObserver = new IntersectionObserver((entries) =>{
      entries.forEach(entry =>{
         const id = entry.target.getAttribute('id')
-        const link = document.querySelector(`a[href="${id}"]`)
+        const link = document.querySelector(`a[href=${id}]`)
         console.log(link)
         if(entry.isIntersecting){
            
