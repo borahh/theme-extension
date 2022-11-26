@@ -165,14 +165,13 @@ td{
 #page_nav ul{
   display: flex;
   overflow-x: auto;
-  padding: 20px 0;
 }
 #page_nav ul li{
   flex-shrink: 0;
 }
 #page_nav ul li a {
-  padding: 10px;
-  box-sizing: content-box;
+  padding: 20px 10px;
+  box-sizing: border-box;
 }
 #page_nav ul li .active{
   border-bottom: 2px solid black;
