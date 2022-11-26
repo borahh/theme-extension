@@ -194,5 +194,8 @@ const pageNav = `<nav>
 const rhPage = document.querySelector('.rh_page')
 rhPage.insertAdjacentHTML("afterbegin",pageNav)
 
+document.body.setAttribute('data-bs-spy', 'scroll')
+document.body.setAttribute('data-bs-target', '#page_nav')
+
 })
 
