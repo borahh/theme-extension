@@ -156,7 +156,10 @@ td{
   }
 }
 
-
+#page_nav{
+  position: sticky;
+  top: 50px;
+}
 #page_nav ul{
   display: flex;
   overflow-x: auto;
