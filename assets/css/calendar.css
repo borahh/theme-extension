@@ -171,9 +171,10 @@ td{
   display: block;
 }
 #page_nav ul li a {
-  padding: 20px 10px;
+  padding:  10px;
   display: block;
   box-sizing: border-box;
+  text-transform: capitalize;
 }
 #page_nav ul li .active{
   border-bottom: 2px solid black;
