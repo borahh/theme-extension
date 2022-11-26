@@ -212,7 +212,7 @@ const pageNav = `<nav id = 'page_nav'>
 </nav>`
 
 const rhPage = document.querySelector('.rh_page')
-rhPage.insertAdjacentHTML("afterbegin",pageNav)
+rhPage.insertAdjacentHTML("beforebegin",pageNav)
 
 
 
