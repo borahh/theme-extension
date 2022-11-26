@@ -181,22 +181,29 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
   })
 
 //   NavBar
-
-const pageNav = `<nav id = 'page_nav' class="navbar ">
-   <ul class = 'nav' >
-    <li class = "nav-item"><a class = 'nav-link' href = '#property-content-section-content'>description</a></li>
-    <li class = "nav-item"><a class = 'nav-link' href = '#prices'>prices</a></li>
-    <li class = "nav-item"><a class = 'nav-link' href = '#property-availability'>availability</a></li>
-    <li class = "nav-item"><a class = 'nav-link' href = '#property_map'>map</a></li>
+const navLinks = [
+    {id:'#property-content-section-content', name: 'description'},
+ {id:'#prices', name: 'prices'},
+ {id:'#property-availability', name: 'availability'},
+  {id:'#property_map', name: 'map'}
+]
+let navLinksHTML  = ' ';
+navLinks.forEach(item =>{
+    navLinksHTML += `<li><a href = '${item.id}'>${item.name}</a> `
+})
+const pageNav = `<nav>
+   <ul id = 'page_nav'>
+    <li><a href = >description</a></li>
+    <li><a href = >prices</a></li>
+    <li><a href = >availability</a></li>
+    <li><a href = >map</a></li>
    </ul>
 </nav>`
 
 const rhPage = document.querySelector('.rh_page')
 rhPage.insertAdjacentHTML("afterbegin",pageNav)
 
-document.body.setAttribute('data-bs-spy', 'scroll')
-document.body.setAttribute('data-bs-target', '#page_nav')
-document.body.setAttribute('tabindex', '0')
+
 
 })
 
