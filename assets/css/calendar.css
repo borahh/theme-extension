@@ -226,7 +226,9 @@ html{
 
 
 /* checkOutDates */
-
+.checkOutDate{
+  position: relative;
+}
 .checkOutDate:before{
   content : ' ';
   height: 100%;
