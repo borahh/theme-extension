@@ -166,14 +166,17 @@ td{
 }
 #page_nav .left, #page_nav .right{
   position: absolute;
-  width: 20px;
+  width: 40px;
   top: 0;
+  
 }
 #page_nav .left{
   left: 0;
+  background: linear-gradient(to right,#f7f7f7, transparent );
 }
 #page_nav .right{
-  right:0,
+  right:0;
+  background: linear-gradient(to left,#f7f7f7, transparent);
 }
 #page_nav ul{
   display: flex;
