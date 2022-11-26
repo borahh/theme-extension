@@ -56,7 +56,7 @@ const sortData = () =>{
 
 
     //get checkOutDates 
-    const checkOutDates = ['2022-12-05']
+    const checkOutDates = ['2022-12-06']
     const sortedCheckOutDates = InJSON(checkOutDates)
     // getCheckInDates
     const checkInDates = ['20022-12-11']
