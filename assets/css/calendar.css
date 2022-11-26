@@ -227,7 +227,7 @@ html{
 
 /* checkOutDates */
 .checkOutDate{
-  position: relative;
+  position: relative ;
 }
 .checkOutDate:before{
   content : ' ';
