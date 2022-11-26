@@ -167,6 +167,11 @@ td{
 #page_nav ul{
   display: flex;
   overflow-x: auto;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+#page_nav ul::-webkit-scrollbar {
+  display: none;
 }
 #page_nav ul li{
   flex-shrink: 0;
