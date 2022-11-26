@@ -30,6 +30,22 @@ function recreateNode(el, withChildren) {
     }
   }
 const sortData = () =>{
+   const InJSON = (dates) =>{
+      const sortedDates = []
+      dates.forEach(item =>{
+        const [year, month, day] = item.split('-')
+        if(sortedDates.length ===0){
+            return sortedDates.push({year , month, dates: [parseInt(day)]})
+        }
+        if(sortedDates.at(-1).year === year && sortedDates.at(-1).month === month  ){
+            return sortedDates.at(-1).dates.push(parseInt(day))
+        }else{
+            return sortedDates.push({year, month,dates: [parseInt(day)]})
+        }
+    })
+     return sortedDates
+   }
+
     // get optional date in json format
     const optionalDates = document.querySelector('#property-availability').getAttribute('data-option-dates').split(',')
     const sortedOptionalDates = []
@@ -59,11 +75,17 @@ const sortData = () =>{
             return sortedBlockedDates.push({year, month,dates: [parseInt(day)]})
         }
     })
-   return {sortedOptionalDates, sortedBlockedDates}
+    //get checkOutDates 
+    const checkOutDates = ['2022-12-05']
+    const sortedCheckOutDates = InJSON(checkOutDates)
+    console.log(sortedCheckOutDates)
+//    getCheckInDates
+const checkInDates = ['20022-12-11']
+   return {sortedOptionalDates, sortedBlockedDates, sortedCheckOutDates}
 
 }
 
-const myFunc = () =>{
+const markOnCalendar = () =>{
     const calenders = document.querySelectorAll('.availability-calendar')
    const {sortedOptionalDates, sortedBlockedDates} = sortData()
  
@@ -94,7 +116,7 @@ const myFunc = () =>{
         
     })
 }
-const myFunc2 = () =>{
+const markOnDatePicker = () =>{
     const calenders = document.querySelectorAll('.daterangepicker .calendar-table')
     const {sortedOptionalDates, sortedBlockedDates} = sortData()
     
@@ -135,12 +157,12 @@ const myFunc2 = () =>{
 
 
 window.addEventListener('load', () =>{
-    const observer = new MutationObserver(myFunc)
-    const observer2 = new MutationObserver(myFunc2)
+    const observer = new MutationObserver(markOnCalendar)
+    const observer2 = new MutationObserver(markOnDatePicker)
     const observeElement1 = document.querySelector('#property-availability')
     const observeElement2 = document.querySelector('body')
-    myFunc()
-    myFunc2()
+    markOnCalendar()
+    markOnDatePicker()
     observer.observe(observeElement1, {childList: true, subtree: true })
     observer2.observe(observeElement2, {childList:true, subtree: true})
 
