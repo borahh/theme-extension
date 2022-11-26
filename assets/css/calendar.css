@@ -236,7 +236,7 @@ html{
   background-image: url('../checkOut.svg');
   background-position: left;
 }
-.checkINDate::before{
+.checkInDate::before{
   background-image: url('../checkIn.svg');
   background-position: right;
 }
