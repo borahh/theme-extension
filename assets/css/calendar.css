@@ -247,5 +247,5 @@ html{
 
 body div.daterangepicker .calendar-table tbody tr .today:not(.start-date, .end-date){
   background-image: none;
-  background-color: #708670;
+  background-color: black;
 }
