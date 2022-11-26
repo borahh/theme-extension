@@ -240,3 +240,7 @@ html{
   background-image: url('../checkIn.svg');
   background-position: right;
 }
+
+body div.daterangepicker .calendar-table tbody tr .today:not(.start-date, .end-date){
+  background-color: #708670;
+}
