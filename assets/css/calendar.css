@@ -16,12 +16,14 @@ body div.daterangepicker .calendar-table tbody tr .start-date:not(.off, .ends){
    background-image: url('../start.svg');
    background-size: contain;
    background-repeat: no-repeat;
+   background-position: right;
    border: none !important;
 }
 body div.daterangepicker .calendar-table tbody tr .end-date:not(.off,.ends){
    background-image: url('../end.svg');
    background-size: contain;
    background-repeat: no-repeat;
+   background-position: left;
    border: none !important;
 }
 div.daterangepicker td.in-range:not(.active,.ends){
@@ -215,14 +217,4 @@ html{
 /* checkOutDates */
 .checkOutDate{
   position: relative ;
-}
-.checkOutDate:before{
-  content : ' ';
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top:0;
-  left:0;
-  background: url('../triangle.svg');
-  background-size: contain;
 }
