@@ -204,6 +204,7 @@ const navLinks = [
  {id:'#property-availability', name: 'availability'},
   {id:'#property_map', name: 'map'},
   {id:'#similar-properties-wrapper', name: 'similar'},
+  {id:'#rvr_booking_widget-1', name: 'book'},
 ]
 let navLinksHTML  = ' ';
 navLinks.forEach(item =>{
