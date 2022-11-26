@@ -25,7 +25,6 @@ body div.daterangepicker .calendar-table tbody tr .end-date{
    background-image: url('../shape.svg');
    background-size: contain;
    background-repeat: no-repeat;
-   transform: scaleX(-1);
    border: none !important;
 }
 div.daterangepicker td.in-range:not(.active,.ends){
