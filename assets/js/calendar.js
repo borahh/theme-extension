@@ -215,7 +215,16 @@ const rhSection = document.querySelector('.rh_section')
 console.log(rhSection)
 rhSection.insertAdjacentHTML("beforebegin",pageNav)
 
+window.addEventListener('scroll', () =>{
+    const pageNaveBar= document.querySelector('#page_nav');
+   const { top} =  pageNaveBar.getBoundingClientRect()
 
+   if(!top){
+      pageNaveBar.classList.add('shadow')
+   }else{
+     pageNaveBar.classList.remove('shadow')
+   }
+})
 
 })
 

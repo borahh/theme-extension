@@ -161,7 +161,7 @@ td{
   top: 0px;
   background: #f7f7f7;
   z-index: 1000;
-  box-shadow: 0px 3px 5px rgba(128, 128, 128, 0.527);
+ 
   margin-top: 40px;
 }
 #page_nav ul{
@@ -181,7 +181,9 @@ td{
 #page_nav ul li .active{
   border-bottom: 2px solid black;
 }
-
+.shadow{
+  box-shadow: 0px 3px 5px rgba(128, 128, 128, 0.527);
+}
 html{
   scroll-behavior: smooth;
 }
@@ -191,5 +193,8 @@ html{
     position: relative;
     box-shadow: none;
     margin-top: 50px;
+  }
+  .shadow{
+    box-shadow: none;
   }
 }
