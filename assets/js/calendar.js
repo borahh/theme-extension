@@ -52,25 +52,18 @@ const sortData = () =>{
  
     // get blocked dates in json format
     const blockedDates = document.querySelector('#property-availability').getAttribute('data-blocked-dates').split(',')
-    const sortedBlockedDates = []
-    blockedDates.forEach(item =>{
-        const [year, month, day] = item.split('-')
-        if(sortedBlockedDates.length ===0){
-            return sortedBlockedDates.push({year , month, dates: [parseInt(day)]})
-        }
-        if(sortedBlockedDates.at(-1).year === year && sortedBlockedDates.at(-1).month === month  ){
-            return sortedBlockedDates.at(-1).dates.push(parseInt(day))
-        }else{
-            return sortedBlockedDates.push({year, month,dates: [parseInt(day)]})
-        }
-    })
+    const sortedBlockedDates = InJSON(blockedDates)
+
+
     //get checkOutDates 
     const checkOutDates = ['2022-12-05']
     const sortedCheckOutDates = InJSON(checkOutDates)
-    console.log(sortedCheckOutDates)
-//    getCheckInDates
-const checkInDates = ['20022-12-11']
-   return {sortedOptionalDates, sortedBlockedDates, sortedCheckOutDates}
+    // getCheckInDates
+    const checkInDates = ['20022-12-11']
+    const sortedCheckInDates = InJSON(checkInDates)
+
+    
+   return {sortedOptionalDates, sortedBlockedDates, sortedCheckOutDates, sortedCheckInDates}
 
 }
 
