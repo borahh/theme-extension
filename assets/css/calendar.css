@@ -184,3 +184,9 @@ td{
 html{
   scroll-behavior: smooth;
 }
+
+@media(min-width: 1440px){
+  #page_nav{
+    position: relative;
+  }
+}
