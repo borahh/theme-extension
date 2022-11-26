@@ -144,6 +144,17 @@ const markOnDatePicker = () =>{
               })
             }
         })
+        sortedCheckInDates.forEach(item =>{
+            if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
+              calender.querySelectorAll('table tbody td').forEach(td =>{
+                if(item.dates.includes(parseInt(td.innerText))){
+                    if(!td.classList.contains('ends')){
+                       td.classList.add('checkInDate')
+                    }
+                }
+              })
+            }
+        })
         
     })
 }
