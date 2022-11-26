@@ -194,10 +194,7 @@ navLinks.forEach(item =>{
 })
 const pageNav = `<nav>
    <ul id = 'page_nav'>
-    <li><a href = >description</a></li>
-    <li><a href = >prices</a></li>
-    <li><a href = >availability</a></li>
-    <li><a href = >map</a></li>
+     ${navLinksHTML}
    </ul>
 </nav>`
 
