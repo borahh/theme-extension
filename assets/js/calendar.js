@@ -180,6 +180,9 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
      })
   })
 
+
+})
+
 //   NavBar
 
 const pageNav = `<nav id = 'page_nav'>
@@ -196,6 +199,3 @@ rhPage.insertAdjacentHTML("afterbegin",pageNav)
 
 document.body.setAttribute('data-bs-spy', 'scroll')
 document.body.setAttribute('data-bs-target', '#page_nav')
-
-})
-
