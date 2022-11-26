@@ -171,6 +171,7 @@ td{
 }
 #page_nav ul li a {
   padding: 20px 10px;
+  display: block;
   box-sizing: border-box;
 }
 #page_nav ul li .active{
