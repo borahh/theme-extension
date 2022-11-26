@@ -160,6 +160,7 @@ td{
   position: sticky;
   top: 0px;
   background: #f7f7f7;
+  z-index: 100;
 }
 #page_nav ul{
   display: flex;
