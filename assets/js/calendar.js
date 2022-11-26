@@ -211,8 +211,8 @@ const pageNav = `<nav id = 'page_nav'>
    </ul>
 </nav>`
 
-const rhPage = document.querySelector('.rh_page')
-rhPage.insertAdjacentHTML("beforebegin",pageNav)
+const rhSection = document.querySelector('.rh_section')
+rhSection.insertAdjacentHTML("beforebegin",pageNav)
 
 
 
