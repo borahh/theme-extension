@@ -217,6 +217,7 @@ html{
 /* checkOutDates */
 .checkOutDate{
   position: relative ;
+  z-index: 5;
 }
 
 .checkOutDate::before{
@@ -230,4 +231,5 @@ html{
   background-position: left;
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: -1;
 }
