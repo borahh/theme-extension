@@ -246,6 +246,6 @@ html{
 }
 
 div.daterangepicker .calendar-table tbody tr .today{
-  background-image: none;
-  background-color: black;
+  background-image: none !important;
+  background-color: black !important;
 }
