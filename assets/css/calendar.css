@@ -168,9 +168,11 @@ td{
 #page_nav .left, #page_nav .right{
   position: absolute;
   width: 25px;
-  top: 50%;
+  height: 100%;
+  top: 0%;
   transform: translateY(-50%);
-  
+  display: grid;
+  place-items: center;
 }
 #page_nav .left{
   left: 0px;
