@@ -183,11 +183,11 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
 //   NavBar
 
 const pageNav = `<nav id = 'page_nav'>
-   <ul >
-    <li><a href = '#property-content-section-content'>description</a></li>
-    <li><a href = '#prices'>prices</a></li>
-    <li><a href = '#property-availability'>availability</a></li>
-    <li><a href = '#property_map'>map</a></li>
+   <ul class = 'nav' >
+    <li class = "nav-item"><a class = 'nav-link' href = '#property-content-section-content'>description</a></li>
+    <li class = "nav-item"><a class = 'nav-link' href = '#prices'>prices</a></li>
+    <li class = "nav-item"><a class = 'nav-link' href = '#property-availability'>availability</a></li>
+    <li class = "nav-item"><a class = 'nav-link' href = '#property_map'>map</a></li>
    </ul>
 </nav>`
 
