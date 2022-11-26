@@ -207,7 +207,9 @@ td{
 html{
   scroll-behavior: smooth;
 }
-
+body{
+  overflow-x: hidden;
+}
 @media(min-width: 1440px){
   #page_nav{
     position: relative;
