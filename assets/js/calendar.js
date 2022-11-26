@@ -138,7 +138,7 @@ const markOnDatePicker = () =>{
               calender.querySelectorAll('table tbody td').forEach(td =>{
                 if(item.dates.includes(parseInt(td.innerText))){
                     if(!td.classList.contains('ends')){
-                       td.classList.add('checkOutDate')
+                       td.classList.add('checkOutDate') 
                     }
                 }
               })
