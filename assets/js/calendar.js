@@ -205,8 +205,8 @@ navLinks.forEach(item =>{
     intersectionObserver.observe(document.querySelector(item.id))
     navLinksHTML += `<li><a href = '${item.id}' >${item.name}</a> `
 })
-const pageNav = `<nav id = 'page_nav' class = 'rh_wrap--padding'>
-   <ul >
+const pageNav = `<nav id = 'page_nav' >
+   <ul class = 'rh_wrap--padding'>
      ${navLinksHTML}
    </ul>
 </nav>`
