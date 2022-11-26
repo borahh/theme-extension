@@ -174,11 +174,11 @@ td{
   
 }
 #page_nav .left{
-  left: 5px;
+  left: 0px;
   background: linear-gradient(to right,#f7f7f7,#f7f7f7, transparent );
 }
 #page_nav .right{
-  right:5px;
+  right:0px;
   background: linear-gradient(to left,#f7f7f7, #f7f7f7, transparent);
 }
 #page_nav ul{
