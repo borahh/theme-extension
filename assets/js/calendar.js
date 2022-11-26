@@ -181,6 +181,7 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
   })
 
 //   NavBar
+document.querySelector('.rh_rvr_optional_services_wrapper').setAttribute('id', 'servies')
 
 const intersectionObserver = new IntersectionObserver((entries) =>{
      entries.forEach(entry =>{
@@ -195,10 +196,14 @@ const intersectionObserver = new IntersectionObserver((entries) =>{
 }, {rootMargin: '20% 20% 0% 0%', threshold: 0.5})
 
 const navLinks = [
+    {id:'#property-featured-image', name: 'gallary'},
     {id:'#property-content-section-content', name: 'description'},
+    {id:'#property-content-section-features', name: 'Features'},
+    {id:'#servies', name: 'services'},
  {id:'#prices', name: 'prices'},
  {id:'#property-availability', name: 'availability'},
-  {id:'#property_map', name: 'map'}
+  {id:'#property_map', name: 'map'},
+  {id:'#similar-properties-wrapper', name: 'similar'},
 ]
 let navLinksHTML  = ' ';
 navLinks.forEach(item =>{
