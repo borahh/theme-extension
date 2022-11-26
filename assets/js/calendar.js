@@ -189,7 +189,7 @@ const navLinks = [
 ]
 let navLinksHTML  = ' ';
 navLinks.forEach(item =>{
-    navLinksHTML += `<li><a href = '${item.id}'>${item.name}</a> `
+    navLinksHTML += `<li><a href = '${item.id}' >${item.name}</a> `
 })
 const pageNav = `<nav>
    <ul id = 'page_nav'>
