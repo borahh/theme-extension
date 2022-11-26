@@ -62,7 +62,7 @@ const sortData = () =>{
     const checkInDates = ['20022-12-11']
     const sortedCheckInDates = InJSON(checkInDates)
 
-    
+
    return {sortedOptionalDates, sortedBlockedDates, sortedCheckOutDates, sortedCheckInDates}
 
 }
@@ -100,7 +100,7 @@ const markOnCalendar = () =>{
 }
 const markOnDatePicker = () =>{
     const calenders = document.querySelectorAll('.daterangepicker .calendar-table')
-    const {sortedOptionalDates, sortedBlockedDates} = sortData()
+    const {sortedOptionalDates, sortedBlockedDates, sortedCheckInDates, sortedCheckOutDates} = sortData()
     
     calenders.forEach(async calender =>{
         const ele =  await waitForElm(calender.querySelector('.month'))
@@ -128,6 +128,17 @@ const markOnDatePicker = () =>{
                     td.classList.add('disabled')
                     td.classList.add('reserved')
                     td.style.color = 'white'
+                    }
+                }
+              })
+            }
+        })
+        sortedCheckOutDates.forEach(item =>{
+            if(item.year == year.replace(' ', '') && parseInt(item.month) == monthNumber.indexOf(month.toLowerCase()) + 1 ){
+              calender.querySelectorAll('table tbody td').forEach(td =>{
+                if(item.dates.includes(parseInt(td.innerText))){
+                    if(!td.classList.contains('ends')){
+                       td.classList.add('checkOutDate')
                     }
                 }
               })

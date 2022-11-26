@@ -223,3 +223,17 @@ html{
     display: none;
   }
 }
+
+
+/* checkOutDates */
+
+.checkOutDate:before{
+  content : ' ';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  background: url('../triangle.svg');
+  background-size: contain;
+}
