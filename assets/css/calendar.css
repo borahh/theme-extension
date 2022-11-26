@@ -245,7 +245,7 @@ html{
   background-position: right;
 }
 
-.daterangepicker .calendar-table tbody tr .today{
+div.daterangepicker .calendar-table tbody tr .today{
   background-image: none;
   background-color: black;
 }
