@@ -49,7 +49,7 @@ const sortData = () =>{
     // get optional date in json format
     const optionalDates = document.querySelector('#property-availability').getAttribute('data-option-dates').split(',')
     const sortedOptionalDates = InJSON(optionalDates)
-
+ 
     // get blocked dates in json format
     const blockedDates = document.querySelector('#property-availability').getAttribute('data-blocked-dates').split(',')
     const sortedBlockedDates = []
