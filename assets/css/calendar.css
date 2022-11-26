@@ -164,9 +164,9 @@ td{
   flex-shrink: 0;
 }
 #page_nav ul li a {
-  padding: 5px;
+  padding: 10px;
+  box-sizing: content-box;
 }
 #page_nave ul li .active{
   border-bottom: 2px solid black;
-  box-sizing: content-box;
 }

@@ -181,6 +181,20 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
   })
 
 //   NavBar
+
+const intersectionObserver = new IntersectionObserver((entries) =>{
+     entries.forEach(entry =>{
+        const id = entry.target.getAttribute('id')
+        const link = document.querySelector(`a[href = "${id}"]`)
+        if(entry.isIntersecting){
+          
+           link.classList.add('active')
+        }else{
+            link.classList.remove('active')
+        }
+     })
+})
+
 const navLinks = [
     {id:'#property-content-section-content', name: 'description'},
  {id:'#prices', name: 'prices'},
@@ -189,6 +203,7 @@ const navLinks = [
 ]
 let navLinksHTML  = ' ';
 navLinks.forEach(item =>{
+    intersectionObserver.observe(document.querySelector(item.id))
     navLinksHTML += `<li><a href = '${item.id}' >${item.name}</a> `
 })
 const pageNav = `<nav id = 'page_nav'>
