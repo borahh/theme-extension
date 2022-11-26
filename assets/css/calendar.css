@@ -217,4 +217,7 @@ html{
   .shadow{
     box-shadow: none;
   }
+  #page_nav .left, #page_nav .right{
+    display: none;
+  }
 }
