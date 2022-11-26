@@ -158,6 +158,7 @@ td{
 
 #page_nav{
   position: sticky;
+  position: -webkit-sticky; /* Safari */
   top: 0px;
   background: #f7f7f7;
   z-index: 1000;
@@ -176,7 +177,7 @@ td{
   background: linear-gradient(to right,#f7f7f7,#f7f7f7, transparent );
 }
 #page_nav .right{
-  right:-5px;
+  right:-7px;
   background: linear-gradient(to left,#f7f7f7, #f7f7f7, transparent);
 }
 #page_nav ul{
@@ -207,9 +208,7 @@ td{
 html{
   scroll-behavior: smooth;
 }
-body{
-  overflow-x: hidden;
-}
+
 @media(min-width: 1440px){
   #page_nav{
     position: relative;
