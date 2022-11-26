@@ -133,9 +133,6 @@ const myFunc2 = () =>{
     })
 }
 
-const svgShape =`<svg style = "display:none"  viewBox="0 0 599 1197" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M598.5 0.5H0.5V598.5V1196.5H598.5C598.5 1196.5 25.9468 1196.5 25.9468 598.5C25.9468 0.5 598.5 0.5 598.5 0.5Z" />
-</svg>`
 
 window.addEventListener('load', () =>{
     const observer = new MutationObserver(myFunc)
@@ -161,17 +158,7 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
     item.innerHTML += element
  })
 
-//  currency change
-//  const currencySelector = document.querySelector('select[name = "currencyType"]')
-//  const currencySwitcherList = document.querySelectorAll("#currency-switcher-list > li")
 
-//  currencySelector.addEventListener('change', () =>{
-//      currencySwitcherList.forEach(li=>{
-//        if(li.dataset.currencyCode === currencySelector.value){
-//           li.click()
-//        }
-//      })
-//  })
 
 //  room filter
   const pricesTableRows = document.querySelectorAll('#prices > table> tbody > tr')
@@ -193,21 +180,16 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
      })
   })
 
-// currency convertion and calculation
-// const noOfRooms = document.querySelector('select[name="adult"]')
-// const availablePlans = JSON.parse(document.querySelector('#AvailablePlans').dataset.plans)
-// const form = document.querySelector('.rvr-booking-form')
-// const pricePerNight = document.querySelector('.price-per-night')
-// pricePerNight.value = availablePlans[0][1]
+//   NavBar
 
-// noOfRooms.addEventListener('change', () =>{
-//     availablePlans.forEach(item =>{
-//         if(noOfRooms.value == item[0]){
-//            pricePerNight.value = item[1]
-//         }
-//     })
-// })
+const pageNav = `<nav>
+   <ul>
+    <li><a href = '#prices'>prices</a></li>
+   </ul>
+</nav>`
 
+const rhPage = document.querySelector('.rh_page')
+rhPage.insertAdjacentHTML("afterbegin",pageNav)
 
 })
 
