@@ -48,18 +48,7 @@ const sortData = () =>{
 
     // get optional date in json format
     const optionalDates = document.querySelector('#property-availability').getAttribute('data-option-dates').split(',')
-    const sortedOptionalDates = []
-    optionalDates.forEach(item =>{
-        const [year, month, day] = item.split('-')
-        if(sortedOptionalDates.length ===0){
-            return sortedOptionalDates.push({year , month, dates: [parseInt(day)]})
-        }
-        if(sortedOptionalDates.at(-1).year === year && sortedOptionalDates.at(-1).month === month  ){
-            return sortedOptionalDates.at(-1).dates.push(parseInt(day))
-        }else{
-            return sortedOptionalDates.push({year, month,dates: [parseInt(day)]})
-        }
-    })
+    const sortedOptionalDates = InJSON(optionalDates)
 
     // get blocked dates in json format
     const blockedDates = document.querySelector('#property-availability').getAttribute('data-blocked-dates').split(',')
@@ -252,7 +241,6 @@ const pageNav = `<nav id = 'page_nav' >
 </nav>`
 
 const rhSection = document.querySelector('.rh_section')
-console.log(rhSection)
 rhSection.insertAdjacentHTML("beforebegin",pageNav)
 
 window.addEventListener('scroll', () =>{
