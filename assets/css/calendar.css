@@ -31,10 +31,10 @@ div.daterangepicker td.in-range:not(.active,.ends){
   color:white;
 
 }
-/* .daterangepicker td.available:hover{
+.daterangepicker td.available:hover{
   background-color:#708670;
   color:white;
-} */
+}
 .daterangepicker .calendar-table td{
   border: none !important;
   height: auto;
@@ -245,7 +245,7 @@ html{
   background-position: right;
 }
 
-body div.daterangepicker .calendar-table tbody tr .today:not(.start-date, .end-date){
+.daterangepicker .calendar-table tbody tr .today:not(.start-date, .end-date){
   background-image: none;
   background-color: black;
 }
