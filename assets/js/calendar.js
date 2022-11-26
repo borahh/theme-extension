@@ -189,9 +189,9 @@ const intersectionObserver = new IntersectionObserver((entries) =>{
         const id = entry.target.getAttribute('id')
         const link = document.querySelector(`a[href= "#${id}"]`)
         if(entry.isIntersecting){
+            document.querySelector('#page_nav a').forEach(item => item.classList.remove('active'))
            link.classList.add('active')
-        }else{
-            link.classList.remove('active')
+
         }
      })
 }, {rootMargin: '20% 20% 0% 0%'})
