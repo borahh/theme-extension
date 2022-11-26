@@ -31,6 +31,10 @@ div.daterangepicker td.in-range:not(.active,.ends){
   color:white;
   
 }
+.daterangepicker td.available:hover{
+  background-color:#708670;
+  color:white;
+}
 .daterangepicker .calendar-table td{
   border: none !important;
   height: auto;
