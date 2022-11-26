@@ -223,5 +223,5 @@ html{
   background-repeat: no-repeat;
 }
 .checkOutDate:is(.start-date){
-  background-image: url('../checkOut.svg'), url('../start.svg');
+  background-image: url('../checkOut.svg'), url('../start.svg') !important;
 }
