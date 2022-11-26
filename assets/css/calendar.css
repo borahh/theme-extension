@@ -217,16 +217,16 @@ html{
 /* checkOutDates */
 .checkOutDate{
   position: relative ;
+}
+
+.checkOutDate:before{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('../checkOut.svg');
   background-position: left;
   background-size: contain;
   background-repeat: no-repeat;
 }
-.checkOutDate:is(.start-date){
-  position: relative ;
-  background-image: url('../checkOut.svg'), url('../start.svg');
-  background-position: left;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
