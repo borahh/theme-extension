@@ -167,7 +167,8 @@ td{
 #page_nav .left, #page_nav .right{
   position: absolute;
   width: 40px;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   
 }
 #page_nav .left{
