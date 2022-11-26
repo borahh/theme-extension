@@ -180,22 +180,22 @@ const perWeekPrice = document.querySelectorAll('.per_week_price')
      })
   })
 
-  const pageNav = `<nav id = 'page_nav'>
-  <ul >
-   <li><a href = '#property-content-section-content'>description</a></li>
-   <li><a href = '#prices'>prices</a></li>
-   <li><a href = '#property-availability'>availability</a></li>
-   <li><a href = '#property_map'>map</a></li>
-  </ul>
+//   NavBar
+
+const pageNav = `<nav id = 'page_nav'>
+   <ul >
+    <li><a href = '#property-content-section-content'>description</a></li>
+    <li><a href = '#prices'>prices</a></li>
+    <li><a href = '#property-availability'>availability</a></li>
+    <li><a href = '#property_map'>map</a></li>
+   </ul>
 </nav>`
 
 const rhPage = document.querySelector('.rh_page')
 rhPage.insertAdjacentHTML("afterbegin",pageNav)
-})
-
-//   NavBar
-
-
 
 document.body.setAttribute('data-bs-spy', 'scroll')
 document.body.setAttribute('data-bs-target', '#page_nav')
+
+})
+
