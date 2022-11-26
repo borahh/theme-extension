@@ -180,3 +180,7 @@ td{
 #page_nav ul li .active{
   border-bottom: 2px solid black;
 }
+
+body{
+  scroll-behavior: smooth;
+}
