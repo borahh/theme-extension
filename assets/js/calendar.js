@@ -169,6 +169,8 @@ window.addEventListener('load', () =>{
     markOnDatePicker()
     observer.observe(observeElement1, {childList: true, subtree: true })
     observer2.observe(observeElement2, {childList:true, subtree: true})
+    document.querySelector('.daterangepicker .today').classList.remove('start-date')
+    document.querySelector('.daterangepicker .today').classList.remove('end-date')
 
 //    prices table
 const perDayPrice = document.querySelectorAll('.per_day_price')
