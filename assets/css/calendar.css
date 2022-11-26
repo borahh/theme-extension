@@ -6,11 +6,9 @@ body div.daterangepicker .calendar-table tbody tr .ends{
 }
 body div.daterangepicker .calendar-table tbody tr .start-date{
   position: relative !important;
-  background: transparent !important;
 }
 body div.daterangepicker .calendar-table tbody tr .end-date{
   position: relative !important;
-  background: transparent !important;
 }
 body div.daterangepicker .calendar-table tbody tr .off{
 
