@@ -209,7 +209,7 @@ html{
   scroll-behavior: smooth;
 }
 
-@media(min-width: 1440px){
+@media(min-width: 1140px){
   #page_nav{
     position: relative;
     box-shadow: none;
