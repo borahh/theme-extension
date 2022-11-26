@@ -170,7 +170,6 @@ td{
   width: 25px;
   height: 100%;
   top: 0%;
-  transform: translateY(-50%);
   display: grid;
   place-items: center;
 }
