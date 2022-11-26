@@ -13,25 +13,15 @@ body div.daterangepicker .calendar-table tbody tr .end-date{
 body div.daterangepicker .calendar-table tbody tr .off{
 
 }
-body div.daterangepicker .calendar-table tbody tr .start-date:after{
-   content: ' ';
-   position: absolute;
-   top:0;
-   left:-1px;
-   height: 100%;
-   width: calc(100% + 1px);
+body div.daterangepicker .calendar-table tbody tr .start-date{
+
    background-image: url('../shape.svg');
    background-size: contain;
    background-repeat: no-repeat;
    border: none !important;
 }
-body div.daterangepicker .calendar-table tbody tr .end-date:after{
-   content: ' ';
-   position: absolute;
-   top:0;
-   right:-1px;
-   height: 100%;
-   width: calc(100% + 1px);
+body div.daterangepicker .calendar-table tbody tr .end-date{
+ 
    background-image: url('../shape.svg');
    background-size: contain;
    background-repeat: no-repeat;
