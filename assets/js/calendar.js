@@ -56,10 +56,10 @@ const sortData = () =>{
 
 
     //get checkOutDates 
-    const checkOutDates = ['2022-12-06']
+    const checkOutDates = document.querySelector('#property-availability').getAttribute('data-out-dates').split(',')
     const sortedCheckOutDates = InJSON(checkOutDates)
     // getCheckInDates
-    const checkInDates = ['2022-12-11']
+    const checkInDates = document.querySelector('#property-availability').getAttribute('data-in-dates').split(',')
     const sortedCheckInDates = InJSON(checkInDates)
 
 
