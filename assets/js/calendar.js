@@ -271,6 +271,6 @@ window.addEventListener('scroll', () =>{
 // make request when page loads
 const checkOutSelector = document.querySelector('input[name="check_out"]')
 checkOutSelector.value = checkOutSelector.value
-
+console.log(checkOutSelector.value)
 })
 
