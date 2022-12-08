@@ -269,8 +269,7 @@ window.addEventListener('scroll', () =>{
 })
 
 // make request when page loads
-const checkOutSelector = document.querySelector('input[name="check_out"]')
-checkOutSelector.value = checkOutSelector.value
-console.log(checkOutSelector.value)
+// const checkOutSelector = document.querySelector('input[name="check_out"]')
+$('input[name="check_out"]').data('daterangepicker').setStartDate('03/01/2025');
 })
 
