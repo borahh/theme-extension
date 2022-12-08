@@ -270,6 +270,6 @@ window.addEventListener('scroll', () =>{
 
 // make request when page loads
 const checkOutSelector = document.querySelector('input[name="check_out"]')
- checkOutSelector.data('daterangepicker').setStartDate('03/01/2025');
+ checkOutSelector.data('daterangepicker').setStartDate('03/01/2025'); 
 })
 
