@@ -166,7 +166,6 @@ async function calculateCost(startDate, endDate, flag) {
     const checkOut = document.querySelector('input[name="check_out"]')
     let pricePerNight = document.querySelector('.price-per-night').value
     const serviceCharges = parseFloat(document.querySelector('.service-charges').value);
-    console.log(serviceCharges)
     const govtTax = parseFloat(document.querySelector('.govt-charges').value);
     const propertyPricingType = document.querySelector('.property-pricing').value; // Seasonal / flat.
     const propertyID = document.querySelector('.property-id').value;
@@ -239,6 +238,7 @@ adult:  parseInt(document.querySelector('select.rvr-adult').value),
 
         // Calculate service charges.
         var costServiceCharges = (costStayingNights * serviceCharges) / 100;
+        console.log(costServiceCharges)
         costServiceCharges = (isNaN(costServiceCharges)) ? 0 : costServiceCharges;
 
         // Guests data.
