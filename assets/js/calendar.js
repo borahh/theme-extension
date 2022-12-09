@@ -267,16 +267,15 @@ async function calculateCost(startDate, endDate, flag) {
         // Prepare additional fees data if it's available.
         if (additionalFeesFields) {
             // Number of guests information.
-            adults.removeEventListener('change.calculation');
-            adults.addEventListener('change.calculation', function () { // Redo the calculations on adults change.
-                calculateCost(startDate, endDate, null);
-            });
+            const eventHandler = function () { // Redo the calculations on adults change.
+              calculateCost(startDate, endDate, null);
+          }
+            adults.removeEventListener('change.calculation', eventHandler);
+            adults.addEventListener('change.calculation',eventHandler );
 
             if ('adult' === book_child_as) { // Check if child will be booked as an adult.
-                children.removeEventListener('change.calculation');
-                children.addEventListener('change.calculation', function () { // Redo the calculations on children change.
-                    calculateCost(startDate, endDate, null);
-                });
+                children.removeEventListener('change.calculation', eventHandler);
+                children.addEventListener('change.calculation', eventHandler);
             }
 
             additionalFeesFields = additionalFeesFields.children; // Assign all additional fees fields to the fields variable if exists.
