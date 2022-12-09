@@ -524,6 +524,6 @@ window.addEventListener('scroll', () =>{
 })
 
 //  make request when page loads
-calculateCost('2023-01-16', '2023-01-17')
+
 })
 
