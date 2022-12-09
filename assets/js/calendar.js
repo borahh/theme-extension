@@ -358,7 +358,7 @@ adult:  parseInt(document.querySelector('select.rvr-adult').value),
                 body:formData,
             }
         ).then(res => res.json()).then(function (response) { // Set prices with their other relevant data to the calculation table and then display the table.
-          var responseJson = response.body;
+          var responseJson = response;
           var prices = responseJson.formatted_prices; // Formatted prices.
 
           // Set data and values for the default booking calculation fields.
