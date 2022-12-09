@@ -203,7 +203,7 @@ async function calculateCost(startDate, endDate, flag) {
         if ('seasonal' === propertyPricingType) {
 
             var fetchStayingNightsCost = {
-                method: 'post',
+                method: 'POST',
                 body: JSON.stringify({
                   action: 'fetch_staying_nights_cost',
                   property_id: propertyID,
