@@ -237,7 +237,7 @@ async function calculateCost(startDate, endDate, flag) {
         const book_child_as = document.querySelector('.book-child-as').value;
         const children = document.querySelector('select.rvr-child');
         const adults = document.querySelector('select.rvr-adult');
-        const adultsNum = parseInt(adults.val());
+        const adultsNum = parseInt(adults.value);
         let guestsNum = 0;
 
         if ('adult' === book_child_as) { // Check if child needs to be booked as an adult.
