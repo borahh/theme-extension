@@ -213,9 +213,9 @@ adult:  parseInt(document.querySelector('select.rvr-adult').value),
           }
             const form_data = new FormData()
 
-            for (const [key, value] of Object.entries(jsonData)) {
-              form_data.append(key,value)
-            }
+            for ( var key in jsonData ) {
+              form_data.append(key, jsonData[key]);
+          }
             
 
             var fetchStayingNightsCost = {
