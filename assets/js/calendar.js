@@ -336,16 +336,16 @@ adult:  parseInt(document.querySelector('select.rvr-adult').value),
 
           const data =  {
             action: 'rvr_format_prices',
-            prices: JSON.stringify({
-              avgPricePerNight,
-              costStayingNights,
-              costExtraGuests,
-              costServiceCharges,
-              ...additionalFeesPrices,
-              costGovtTax,
-              costSubTotal,
-              costTotal,
-          })
+           
+                avgPricePerNight,
+                costStayingNights,
+                costExtraGuests,
+                costServiceCharges,
+                ...additionalFeesPrices,
+                costGovtTax,
+                costSubTotal,
+                costTotal,
+            
         }
         const formData = new FormData()
         for(let key in data){
