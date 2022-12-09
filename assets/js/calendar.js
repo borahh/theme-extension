@@ -162,8 +162,8 @@ const markOnDatePicker = () =>{
 async function calculateCost(startDate, endDate, flag) {
 
     // Setting the Check-In and Check-Out dates in their fields.
-    const checkIn = document.querySelector('input[nane="check_in"]')
-    const checkOut = document.querySelector('input[nane="check_out"]')
+    const checkIn = document.querySelector('input[name="check_in"]')
+    const checkOut = document.querySelector('input[name="check_out"]')
     let pricePerNight = document.querySelector('.price-per-night').value
     const propertyPricingType = document.querySelector('.property-pricing').value; // Seasonal / flat.
     checkIn.value = startDate
