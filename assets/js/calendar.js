@@ -273,8 +273,8 @@ async function calculateCost(startDate, endDate, flag) {
             });
 
             if ('adult' === book_child_as) { // Check if child will be booked as an adult.
-                children.off('change.calculation');
-                children.on('change.calculation', function () { // Redo the calculations on children change.
+                children.removeEventListener('change.calculation');
+                children.addEventListener('change.calculation', function () { // Redo the calculations on children change.
                     calculateCost(startDate, endDate, null);
                 });
             }
