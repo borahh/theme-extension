@@ -267,8 +267,8 @@ async function calculateCost(startDate, endDate, flag) {
         // Prepare additional fees data if it's available.
         if (additionalFeesFields) {
             // Number of guests information.
-            adults.off('change.calculation');
-            adults.on('change.calculation', function () { // Redo the calculations on adults change.
+            adults.removeEventListener('change.calculation');
+            adults.addEventListener('change.calculation', function () { // Redo the calculations on adults change.
                 calculateCost(startDate, endDate, null);
             });
 
