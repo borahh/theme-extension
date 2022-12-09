@@ -214,6 +214,9 @@ async function calculateCost(startDate, endDate, flag) {
                   check_in: startDate,
                   check_out: endDate,
               }),   
+             headers: {
+              'Content-type': 'application/x-www-form-urlencoded'
+             }
             };
            fetch('https://icvillastbarth.com/wp-admin/admin-ajax.php', fetchStayingNightsCost).then(res => res.json).then( function (response) {
             costStayingNights = parseInt(response.body);
