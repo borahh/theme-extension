@@ -219,7 +219,7 @@ adult:  parseInt(document.querySelector('select.rvr-adult').value),
 
             var fetchStayingNightsCost = {
                 method: 'POST',
-                body:,   
+                body: form_data, 
              headers: {
               'Content-type': 'application/x-www-form-urlencoded'
              }
