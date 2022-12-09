@@ -203,17 +203,23 @@ async function calculateCost(startDate, endDate, flag) {
         var costStayingNights = null;
 
         if ('seasonal' === propertyPricingType) {
+            const jsonData =  {
+              action: 'fetch_staying_nights_cost',
+              property_id: propertyID,
+adult:  parseInt(document.querySelector('select.rvr-adult').value),
+              default_price: defaultPricePerNight,
+              check_in: startDate,
+              check_out: endDate,
+          }
+            const form_data = new FormData()
+
+            Object.entries(jsonData).forEach(([key, value]) => {
+              form_data.append(key, value)
+            })
 
             var fetchStayingNightsCost = {
                 method: 'POST',
-                body: JSON.stringify({
-                  action: 'fetch_staying_nights_cost',
-                  property_id: propertyID,
-  adult:  parseInt(document.querySelector('select.rvr-adult').value),
-                  default_price: defaultPricePerNight,
-                  check_in: startDate,
-                  check_out: endDate,
-              }),   
+                body:,   
              headers: {
               'Content-type': 'application/x-www-form-urlencoded'
              }
