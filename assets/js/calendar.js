@@ -166,6 +166,7 @@ async function calculateCost(startDate, endDate, flag) {
     const checkOut = document.querySelector('input[name="check_out"]')
     let pricePerNight = document.querySelector('.price-per-night').value
     const propertyPricingType = document.querySelector('.property-pricing').value; // Seasonal / flat.
+    const propertyID = document.querySelector('.property-id').value;
     checkIn.value = startDate
     checkOut.value = endDate
     let bulkPrices;
