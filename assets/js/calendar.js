@@ -210,8 +210,8 @@ async function calculateCost(startDate, endDate, flag) {
                     property_id: propertyID,
     adult:  parseInt(document.querySelector('select.rvr-adult').value),
                     default_price: defaultPricePerNight,
-                    check_in: startDate.format('YYYY-MM-DD'),
-                    check_out: endDate.format('YYYY-MM-DD'),
+                    check_in: startDate,
+                    check_out: endDate,
                 },
                 success: function (response) {
                     costStayingNights = parseInt(response);
