@@ -347,11 +347,15 @@ adult:  parseInt(document.querySelector('select.rvr-adult').value),
                 costTotal,
             }
         }
+        const formData = new FormData()
+        for(let key in data){
+          formData.append(key, data[key])
+        }
         // Format prices to display in the calculation table.
         fetch(document.querySelector('.rvr-booking-form').getAttribute('action'),
             {
               method: 'POST',
-                body:JSON.stringify(data),
+                body:formData,
             }
         ).then(res => res.json()).then(function (response) { // Set prices with their other relevant data to the calculation table and then display the table.
           var responseJson = response.body;
