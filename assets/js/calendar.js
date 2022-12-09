@@ -279,7 +279,7 @@ async function calculateCost(startDate, endDate, flag) {
             }
 
             additionalFeesFields = additionalFeesFields.children; // Assign all additional fees fields to the fields variable if exists.
-
+         console.log(additionalFeesFields)
             // Loop through all additional fees fields and build an array from their data.
             additionalFeesFields.forEach(function(item) {
 
