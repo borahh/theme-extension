@@ -376,13 +376,13 @@ adult:  parseInt(document.querySelector('select.rvr-adult').value),
           gtField.innerText =prices.costGovtTax;
           tpField.innerText =prices.costTotal;
 
-          snField.dataset['avg-price-per-night'] =  Math.round(avgPricePerNight);
-          snField.dataset['total-nights'] =  Math.round(days);
-          psnField.dataset['staying-nights'] =  Math.round(costStayingNights);
-          scField.dataset['service-charges'] =  Math.round(costServiceCharges);
-          stField.dataset['subtotal'] =  Math.round(costSubTotal);
-          gtField.dataset['govt-tax'] =  Math.round(costGovtTax);
-          tpField.dataset['total'] =  Math.round(costTotal);
+          snField.data['avg-price-per-night'] =  Math.round(avgPricePerNight);
+          snField.data['total-nights'] =  Math.round(days);
+          psnField.data['staying-nights'] =  Math.round(costStayingNights);
+          scField.data['service-charges'] =  Math.round(costServiceCharges);
+          stField.data['subtotal'] =  Math.round(costSubTotal);
+          gtField.data['govt-tax'] =  Math.round(costGovtTax);
+          tpField.data['total'] =  Math.round(costTotal);
 
           // Additional guest details display.
           const egField = document.querySelector('.extra-guests-field');
@@ -392,7 +392,7 @@ adult:  parseInt(document.querySelector('select.rvr-adult').value),
               egField.style.display = 'block';
               egField.querySelector('span').innerText = extraGuestsNum ;
               egFieldVal.innerText = prices.costExtraGuests;
-              egFieldVal.dataset['extra-guests'] = Math.round(costExtraGuests);
+              egFieldVal.data['extra-guests'] = Math.round(costExtraGuests);
           } else {
               egField.style.display= 'none'
           }
