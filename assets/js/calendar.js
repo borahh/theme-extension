@@ -238,7 +238,7 @@ adult:  parseInt(document.querySelector('select.rvr-adult').value),
 
         // Calculate service charges.
         var costServiceCharges = (costStayingNights * serviceCharges) / 100;
-        console.log(costServiceCharges, serviceCharges)
+        console.log(costServiceCharges, serviceCharges) 
         costServiceCharges = (isNaN(costServiceCharges)) ? 0 : costServiceCharges;
 
         // Guests data.
