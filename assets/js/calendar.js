@@ -203,21 +203,23 @@ async function calculateCost(startDate, endDate, flag) {
         if ('seasonal' === propertyPricingType) {
 
             var fetchStayingNightsCost = {
-                type: 'post',
-                url: ajaxurl,
-                data: {
-                    action: 'fetch_staying_nights_cost',
-                    property_id: propertyID,
-    adult:  parseInt(document.querySelector('select.rvr-adult').value),
-                    default_price: defaultPricePerNight,
-                    check_in: startDate,
-                    check_out: endDate,
-                },
-                success: function (response) {
-                    costStayingNights = parseInt(response);
-                }
+                method: 'post',
+                body: JSON.stringify({
+                  action: 'fetch_staying_nights_cost',
+                  property_id: propertyID,
+  adult:  parseInt(document.querySelector('select.rvr-adult').value),
+                  default_price: defaultPricePerNight,
+                  check_in: startDate,
+                  check_out: endDate,
+              }),
+              headers: {
+                "Content-Type": 'application/json'
+              }
+                
             };
-            await $.ajax(fetchStayingNightsCost);
+           fetch('https://icvillastbarth.com/wp-admin/admin-ajax.php', fetchStayingNightsCost).then(res => res.json).then( function (response) {
+            costStayingNights = parseInt(response.body);
+        })
 
 
         } else {
@@ -351,7 +353,7 @@ async function calculateCost(startDate, endDate, flag) {
                 }
             }
         ).then(res => res.json()).then(function (response) { // Set prices with their other relevant data to the calculation table and then display the table.
-          var responseJson = response;
+          var responseJson = response.body;
           var prices = responseJson.formatted_prices; // Formatted prices.
 
           // Set data and values for the default booking calculation fields.
