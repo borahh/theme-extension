@@ -185,9 +185,9 @@ async function calculateCost(startDate, endDate, flag) {
 
         // Change default per night price if bulk pricing is applicable.
         var defaultPricePerNight = null;
-        Object.entries(bulkPrices).forEach((key, value) =>{
-          if (days >= parseInt(key)) {
-            defaultPricePerNight = parseInt(value);
+        Object.entries(bulkPrices).forEach((obj) =>{
+          if (days >= parseInt(obj[0])) {
+            defaultPricePerNight = parseInt(obj[1]);
         }
         })
 
