@@ -213,11 +213,7 @@ async function calculateCost(startDate, endDate, flag) {
                   default_price: defaultPricePerNight,
                   check_in: startDate,
                   check_out: endDate,
-              }),
-              headers: {
-                "Content-Type": 'application/json'
-              }
-                
+              }),   
             };
            fetch('https://icvillastbarth.com/wp-admin/admin-ajax.php', fetchStayingNightsCost).then(res => res.json).then( function (response) {
             costStayingNights = parseInt(response.body);
@@ -350,9 +346,6 @@ async function calculateCost(startDate, endDate, flag) {
             {
               method: 'POST',
                 body:JSON.stringify(data),
-                headers: {
-                  'Content-Type': 'application/json'
-                }
             }
         ).then(res => res.json()).then(function (response) { // Set prices with their other relevant data to the calculation table and then display the table.
           var responseJson = response.body;
