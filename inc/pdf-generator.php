@@ -12,7 +12,7 @@ add_filter( "manage_edit-booking_columns", function ( $defaults ) {
 add_action( "manage_booking_posts_custom_column", function ( $column_name, $post_id ) {
 	
 	if ( $column_name == 'custom-actions' ) {
-		echo 'Some value here';
+		echo '<a href="#">Generate PDF</a>';
 	}
 	
 }, 10, 2 );
