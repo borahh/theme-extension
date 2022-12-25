@@ -23,7 +23,8 @@
  * Seasonal Prices : https://icvillastbarth.com/wp-admin/theme-editor.php?file=assets%2Fmodern%2Fpartials%2Fproperty%2Fsingle%2Frvr%2Fseasonal-prices.php&theme=realhomes
  **/
 
- include WP_PLUGIN_DIR . '/inc/pdf-generator.php';
+
+ include plugin_dir_path( __FILE__ ) . 'inc/pdf-generator.php';
 /**
  * Never worry about cache again!
  */
