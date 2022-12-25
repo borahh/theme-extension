@@ -1,19 +1,26 @@
 <?php
 
-// Add the custom columns to the book post type:
-add_filter( 'manage_booking_columns', 'set_custom_edit_book_columns' );
-function set_custom_edit_book_columns($columns) {
-    $columns['custom_actions'] = 'Actions';
-    return $columns;
-}
+$post_type = 'booking';
 
-// Add the data to the custom columns for the book post type:
-add_action( 'manage_booking_custom_column' , 'custom_book_column', 10, 2 );
-function custom_book_column( $column, $post_id ) {
-    switch ( $column ) {
-        case 'custom_actions' :
-            echo get_post_meta( $post_id , 'publisher' , true ); 
-            break;
+// Register the columns.
+add_filter( "manage_{$post_type}_posts_columns", function ( $defaults ) {
+	
+	$defaults['custom-one'] = 'Custom One';
+	$defaults['custom-two'] = 'Custom Two';
 
-    }
-}
+	return $defaults;
+} );
+
+// Handle the value for each of the new columns.
+add_action( "manage_{$post_type}_posts_custom_column", function ( $column_name, $post_id ) {
+	
+	if ( $column_name == 'custom-one' ) {
+		echo 'Some value here';
+	}
+	
+	if ( $column_name == 'custom-two' ) {
+		// Display an ACF field
+		echo get_field( 'my_acf_field', $post_id );
+	}
+	
+}, 10, 2 );
