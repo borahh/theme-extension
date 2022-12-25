@@ -24,7 +24,7 @@
  **/
 
 
- include plugin_dir_path( __FILE__ ) . 'inc/pdf-generator.php';
+ include plugin_dir_path( __FILE__ ) . '/inc/pdf-generator.php';
 /**
  * Never worry about cache again!
  */
