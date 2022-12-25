@@ -19,8 +19,7 @@ add_action( "manage_booking_posts_custom_column", function ( $column_name, $post
 	}
 	
 	if ( $column_name == 'custom-two' ) {
-		// Display an ACF field
-		echo get_field( 'my_acf_field', $post_id );
+		echo "X";
 	}
 	
 }, 10, 2 );
