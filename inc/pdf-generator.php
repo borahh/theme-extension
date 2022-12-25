@@ -3,7 +3,7 @@
 $post_type = 'booking';
 
 // Register the columns.
-add_filter( "manage_edit-booking_posts_columns", function ( $defaults ) {
+add_filter( "manage_edit-booking_columns", function ( $defaults ) {
 	
 	$defaults['custom-one'] = 'Custom One';
 	$defaults['custom-two'] = 'Custom Two';
