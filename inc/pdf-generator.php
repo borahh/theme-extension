@@ -5,8 +5,12 @@ add_filter( 'manage_edit-booking_columns', function ( $columns ){
 } );
 
 
-add_action( 'manage_booking_custom_column', function ( $column_name, $post_id ) {
-    if ($column_name == 'Actions') {
-        echo $post_id;
-    }
-}, 10, 2);
+
+add_filter( 'manage_booking_custom_column', function ( $output, $column_name, $id ) {
+
+	if( $column_name == 'Actions' ) { 
+		$output = $id;
+	}
+	return $output;
+}, 10, 3);
+
