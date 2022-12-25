@@ -1,12 +1,12 @@
 <?php
 
-add_filter('manage_booking_posts_columns', function($columns) {
+add_filter('manage_edit-booking_posts_columns', function($columns) {
     $columns['custom_actions'] = 'Actions';
     return $columns;
 });
 
 
-add_filter( 'manage_booking_custom_column', function ( $output, $column_name, $id ) {
+add_filter( 'manage_edit-booking_custom_column', function ( $output, $column_name, $id ) {
 
 	if( $column_name == 'custom_actions' ) { 
 		$output = $id;
