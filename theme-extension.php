@@ -24,6 +24,13 @@
  **/
 
 
+// Plugin directory path
+ if ( ! defined( 'BORAHH_PLUGIN_DIR' ) ) {
+	define( 'BORAHH_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+}
+
+require_once RVR_PLUGIN_DIR . 'inc/pdf-generator.php';
+
 /**
  * Never worry about cache again!
  */
