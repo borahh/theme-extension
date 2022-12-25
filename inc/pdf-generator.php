@@ -3,7 +3,7 @@
 $post_type = 'booking';
 
 // Register the columns.
-add_filter( "manage_{$post_type}_posts_columns", function ( $defaults ) {
+add_filter( "manage_booking_posts_columns", function ( $defaults ) {
 	
 	$defaults['custom-one'] = 'Custom One';
 	$defaults['custom-two'] = 'Custom Two';
@@ -12,7 +12,7 @@ add_filter( "manage_{$post_type}_posts_columns", function ( $defaults ) {
 } );
 
 // Handle the value for each of the new columns.
-add_action( "manage_{$post_type}_posts_custom_column", function ( $column_name, $post_id ) {
+add_action( "manage_booking_posts_custom_column", function ( $column_name, $post_id ) {
 	
 	if ( $column_name == 'custom-one' ) {
 		echo 'Some value here';
