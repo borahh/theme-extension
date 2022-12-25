@@ -56,10 +56,6 @@ function admin_load_scripts($hook) {
 add_action('admin_enqueue_scripts', 'admin_load_scripts');
 
 
-add_filter( 'manage_edit-booking_columns', function ( $columns ){
-	$columns['abc'] = "ABC";
-	return $columns;
-} );
 
 
 ?>
