@@ -1,5 +1,5 @@
 <?php
-add_filter( 'manage_edit-{post type or taxonomy}_columns', function ( $columns ){
+add_filter( 'manage_edit-booking_columns', function ( $columns ){
 	$columns['abc'] = "ABC";
 	return $columns;
 } );
