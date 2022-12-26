@@ -154,6 +154,12 @@ td{
   #page_nav {
     display: none;
   }
+  #gtranslate_wrapper {
+    display: none;
+  }
+  #ht-ctc-chat {
+    display: none;
+  }
 }
 #page_nav{
   position: sticky;
