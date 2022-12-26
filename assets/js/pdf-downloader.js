@@ -1,3 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-    alert("Ready!");
-}, false);
+window.addEventListener('load', function () {
+    if(document.getElementById('printingMode')) {
+     javascript:window.print();
+    }
+ })
