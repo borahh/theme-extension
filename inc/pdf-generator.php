@@ -22,7 +22,7 @@ add_action( "manage_booking_posts_custom_column", function ( $column_name, $post
 		$URL              = get_permalink( $property_id );
 		
 		echo '<div style="padding-top:10px;">
-				<btn onclick="loadWindowFromURL(\'' . $URL . ', ' . $booking_username . ', ' . $check_in_date . ', ' . $nights . ',' . $nights_price . ', ' . $total . '\')" style="cursor: pointer !important; background-color: #2271b1; color: white; padding: 7px 10px; border-radius: 5px;">
+				<btn onclick="loadWindowFromURL(\'' . $URL . '\', \'' . $booking_username . '\', \'' . $check_in_date . '\', \'' . $nights . '\',\'' . $nights_price . '\', \'' . $total . '\')" style="cursor: pointer !important; background-color: #2271b1; color: white; padding: 7px 10px; border-radius: 5px;">
 					Generate PDF
 				</btn>
 			  </div>';
