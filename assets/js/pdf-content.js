@@ -1,1 +1,4 @@
-console.log("I am here");
+function codeAddress() {
+    alert('ok');
+}
+window.onload = codeAddress;
