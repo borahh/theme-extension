@@ -6,22 +6,22 @@ function fnprint() {
 }
 
 
-function loadWindowURL() {
+function loadWindowFromURL(URL) {
     let windowName = 'w_' + Date.now() + Math.floor(Math.random() * 100000).toString();
-var form = document.createElement("form");
-form.setAttribute("method", "post");
-form.setAttribute("action", "openData.do");
+    var form = document.createElement("form");
+    form.setAttribute("method", "post");
+    form.setAttribute("action", URL);
 
-form.setAttribute("target", windowName);
+    form.setAttribute("target", windowName);
 
-var hiddenField = document.createElement("input"); 
-hiddenField.setAttribute("type", "hidden");
-hiddenField.setAttribute("name", "message");
-hiddenField.setAttribute("value", "val");
-form.appendChild(hiddenField);
-document.body.appendChild(form);
+    var hiddenField = document.createElement("input"); 
+    hiddenField.setAttribute("type", "hidden");
+    hiddenField.setAttribute("name", "message");
+    hiddenField.setAttribute("value", "val");
+    form.appendChild(hiddenField);
+    document.body.appendChild(form);
 
-window.open('', windowName);
+    window.open('', windowName);
 
-form.submit();
+    form.submit();
 }
