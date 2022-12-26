@@ -42,12 +42,12 @@ function my_load_scripts($hook) {
 	// $UNIQUE_VAR_HERE = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/calendar.css' ));
 	
 	// PDF content
-	$pdfContent_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/pdf-content.js' ));
+	$pdfContent_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/pdf-downloader.js' ));
 
 
 	// Run code only for Single post page
 	if ( is_single() && 'property' == get_post_type() ) {
-		wp_enqueue_script( 'pdfGenrator', plugins_url( 'assets/js/pdf-content.js', __FILE__ ), NULL, $pdfContent_ver );	
+		wp_enqueue_script( 'pdfGenrator', plugins_url( 'assets/js/pdf-downloader.js', __FILE__ ), NULL, $pdfContent_ver );	
 	}
 	wp_enqueue_script( 'calendar', plugins_url( 'assets/js/calendar.js', __FILE__ ), array(), $my_js_ver );
 	wp_enqueue_style( 'calendar', 	plugins_url( 'assets/css/calendar.css', 	 __FILE__ ), false, $my_css_ver );
