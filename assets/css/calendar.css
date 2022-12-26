@@ -149,6 +149,12 @@ td{
   }
 }
 
+
+@media print {
+  #page_nav {
+    display: none;
+  }
+}
 #page_nav{
   position: sticky;
   position: -webkit-sticky; /* Safari */
