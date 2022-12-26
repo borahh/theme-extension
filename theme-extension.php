@@ -62,7 +62,7 @@ function admin_load_scripts($hook) {
 	wp_enqueue_script( 'updateMetaFields', plugins_url( 'assets/js/updateMetaFields.js', __FILE__ ), array('jquery'), $my_umf_ver );
 	// wp_enqueue_style( 'UNIQUE_NAME_HERE', 	plugins_url( 'assets/css/calendar.css', 	 __FILE__ ), false,   $UNIQUE_VAR_HERE );
 
-	wp_enqueue_script( 'pdfGenrator', plugins_url( 'assets/js/pdf-generator.js', __FILE__ ), array(''), $pdfGenrator_ver );
+	wp_enqueue_script( 'pdfGenrator', plugins_url( 'assets/js/pdf-generator.js', __FILE__ ), NULL, $pdfGenrator_ver );
 
 }
 add_action('admin_enqueue_scripts', 'admin_load_scripts');
