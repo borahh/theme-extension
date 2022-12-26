@@ -14,8 +14,12 @@ add_action( "manage_booking_posts_custom_column", function ( $column_name, $post
 	if ( $column_name == 'custom-actions' ) {
 		$property_id  = get_post_meta( $post_id, 'rvr_property_id', true );
 		$perma = get_permalink($property_id);
+
+		$obj = [
+			$perma
+		]
 		echo '<div style="padding-top:10px;">
-				<btn onclick="loadWindowFromURL(\'' . $perma . '\')" style="cursor: pointer !important; background-color: #2271b1; color: white; padding: 7px 10px; border-radius: 5px;">
+				<btn onclick="loadWindowFromURL(\'' . ...$obj . '\')" style="cursor: pointer !important; background-color: #2271b1; color: white; padding: 7px 10px; border-radius: 5px;">
 					Generate PDF
 				</btn>
 			  </div>';
