@@ -13,7 +13,7 @@ add_action( "manage_booking_posts_custom_column", function ( $column_name, $post
 	
 	if ( $column_name == 'custom-actions' ) {
 		echo '<div style="padding-top:10px;">
-				<iframe style="display:none;" src="https://uniquevillastbarth.com/property/villa-ixfalia/" id="iframeid"></iframe>
+				<iframe style="visibility:hidden; width: 1px; height: 1px;" src="https://uniquevillastbarth.com/property/villa-ixfalia/" id="iframeid"></iframe>
 				<btn onclick="fnprint()" style="cursor: pointer !important; background-color: #2271b1; color: white; padding: 7px 10px; border-radius: 5px;">
 					Generate PDF
 				</btn>
