@@ -13,12 +13,6 @@ add_action( "manage_booking_posts_custom_column", function ( $column_name, $post
 	
 	if ( $column_name == 'custom-actions' ) {
 		$property_id      = get_post_meta( $post_id, 'rvr_property_id', true );
-
-		// $total            = get_post_meta( $post_id, 'rvr_total_price_eur', true );
-		// $nights           = get_post_meta( $post_id, 'rvr_staying_nights', true );
-		// $nights_price     = get_post_meta( $post_id, 'rvr_price_per_night_eur', true );
-		// $booking_username = get_post_meta( $post_id, 'rvr_renter_name', true );
-		// $check_in_date    = get_post_meta( $post_id, 'rvr_check_in', true );
 		$URL              = get_permalink( $property_id );
 		
 		echo '<div style="padding-top:10px;">
