@@ -55,8 +55,3 @@ a.rvr-booking-cta:hover {
     transition-duration: 300ms;
 }
 
-@media (max-width: 420px) {
-	#properties-listing .rh_page.rh_page__listing_map {
-		display: none;
-	}
-}
