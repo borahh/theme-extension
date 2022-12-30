@@ -24,5 +24,4 @@ document.getElementById('toggleElement').onclick = function () {
     } else {
         element.style.height = borahh_get_height() + "px";
     }
-    console.log(borahh_get_height());
   }
