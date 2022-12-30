@@ -20,7 +20,7 @@ document.getElementById('toggleElement').onclick = function () {
     var element = document.getElementById('contentToggle');
 
     var toggle = document.getElementById('toggleElement');
-    var span = toggle.querySelectorAll('span');
+    var span = toggle.querySelector('span');
     if (element.classList.contains("descHide")) {
         element.classList.remove("descHide")
         element.style.maxHeight = "inherit";
