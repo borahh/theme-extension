@@ -50,7 +50,7 @@ function my_load_scripts($hook) {
 	// Run code only for Single post page
 	if ( is_single() && 'property' == get_post_type() ) {
 		wp_enqueue_script( 'pdfGenrator', plugins_url( 'assets/js/pdf-downloader.js', __FILE__ ), NULL, $pdfContent_ver );	
-		wp_enqueue_script( 'showHide', plugins_url( 'assets/js/show-hide.js', __FILE__ ), NULL, $showJs_ver );	
+		wp_enqueue_script( 'showHide', plugins_url( 'assets/js/show-hide.js', __FILE__ ), NULL, $showJs_ver, true );	
 		wp_enqueue_style( 'showHide', 	plugins_url( 'assets/css/custom.css', 	 __FILE__ ), false, $custom_css_ver );
 
 	}
