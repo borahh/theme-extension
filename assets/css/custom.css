@@ -30,8 +30,9 @@ a.rvr-booking-cta:hover {
 
 /* Text states (for js) */
 .descHide {
-  height: 90px;
+  height: 110px;
   overflow: hidden;
+  -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent);
 }
 
 
@@ -46,4 +47,10 @@ a.rvr-booking-cta:hover {
 
 #toggleElement span {
 	cursor: pointer;
+}
+
+#toggleContent {
+    transition-property: height;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
 }
