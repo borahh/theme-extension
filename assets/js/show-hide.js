@@ -18,14 +18,17 @@ function borahh_get_height() {
 document.getElementById('contentToggle').style.maxHeight = borahh_get_height() + "px";
 document.getElementById('toggleElement').onclick = function () {
     var element = document.getElementById('contentToggle');
+
+    var toggle = document.getElementById('toggleElement');
+    var span = toggle.querySelectorAll('span');
     if (element.classList.contains("descHide")) {
         element.classList.remove("descHide")
         element.style.maxHeight = "inherit";
-        document.getElementById('toggleElement').text = "Show less";
+        span.textContent = "Show less";
     } else {
         element.style.maxHeight = borahh_get_height() + "px";
         element.classList.add("descHide");
-        document.getElementById('toggleElement').text = "Show more";
+        span.textContent = "Show more";
 
 
     }
