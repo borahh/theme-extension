@@ -21,9 +21,12 @@ document.getElementById('toggleElement').onclick = function () {
     if (element.classList.contains("descHide")) {
         element.classList.remove("descHide")
         element.style.maxHeight = "inherit";
+        document.getElementById('toggleElement').text = "Show less";
     } else {
         element.style.maxHeight = borahh_get_height() + "px";
         element.classList.add("descHide");
+        document.getElementById('toggleElement').text = "Show more";
+
 
     }
   }
