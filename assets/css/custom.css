@@ -30,13 +30,10 @@ a.rvr-booking-cta:hover {
 
 /* Text states (for js) */
 .descHide {
-  opacity: 0;
-  top: calc(50% + 8em);
+  height: 90px;
+  overflow: hidden;
 }
-.descShow {
-  opacity: 1;
-  top: calc(50% + 6em);
-}
+
 
 #toggleElement {
 	border-bottom: 2px solid rgb(243, 243, 243);
