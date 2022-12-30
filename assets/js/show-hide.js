@@ -14,7 +14,7 @@ function borahh_get_height() {
     var children = parent.querySelectorAll('p');
     var height = 0;
     for (let index = 0; index = 2 ; index++) {
-        height = height + getAbsoluteHeight(index);
+        height = height + getAbsoluteHeight(children[index]);
         
     }
 
