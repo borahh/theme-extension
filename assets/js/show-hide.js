@@ -20,8 +20,10 @@ document.getElementById('toggleElement').onclick = function () {
     var element = document.getElementById('contentToggle');
     if (element.classList.contains("descHide")) {
         element.classList.remove("descHide")
-        element.style.height = "0px";
+        element.style.height = "inherit";
     } else {
         element.style.height = borahh_get_height() + "px";
+        element.classList.add("descHide");
+
     }
   }
