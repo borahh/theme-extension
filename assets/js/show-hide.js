@@ -15,14 +15,14 @@ function borahh_get_height() {
     var height = getAbsoluteHeight(children[0]) + getAbsoluteHeight(children[1]);
     return height;
 }
-document.getElementById('contentToggle').style.height = borahh_get_height() + "px";
+document.getElementById('contentToggle').style.maxHeight = borahh_get_height() + "px";
 document.getElementById('toggleElement').onclick = function () {
     var element = document.getElementById('contentToggle');
     if (element.classList.contains("descHide")) {
         element.classList.remove("descHide")
-        element.style.height = "inherit";
+        element.style.maxHeight = "inherit";
     } else {
-        element.style.height = borahh_get_height() + "px";
+        element.style.maxHeight = borahh_get_height() + "px";
         element.classList.add("descHide");
 
     }
