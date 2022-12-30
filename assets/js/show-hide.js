@@ -12,11 +12,11 @@ function getAbsoluteHeight(el) {
 function borahh_get_height() {
     var parent = document.getElementById('contentToggle');
     var children = parent.querySelectorAll('p');
-    var slicedArray = children.slice(0, 3);
     var height = 0;
-    slicedArray.forEach(element => {
-        height = getAbsoluteHeight(element) + height;
-    });
+    for (let index = 0; index = 2 ; index++) {
+        height = height + getAbsoluteHeight(index);
+        
+    }
 
     return height;
 }
