@@ -49,7 +49,7 @@ a.rvr-booking-cta:hover {
 	cursor: pointer;
 }
 
-#toggleContent {
+#contentToggle {
     transition-property: height;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
