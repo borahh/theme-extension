@@ -15,9 +15,9 @@ function borahh_get_height() {
     var height = getAbsoluteHeight(children[0]) + getAbsoluteHeight(children[1]);
     return height;
 }
+document.getElementById('contentToggle').style.height = borahh_get_height() + "px";
 document.getElementById('toggleElement').onclick = function () {
     var element = document.getElementById('contentToggle');
-    element.style.height = borahh_get_height() + "px";
     if (element.classList.contains("descHide")) {
         element.classList.remove("descHide")
         element.style.height = "0px";
