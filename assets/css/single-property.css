@@ -78,6 +78,7 @@ a.rvr-booking-cta:hover {
 	left: 0;
 	width: 100vw;
 	z-index: 9999999999;
+	transition: transform 200ms linear;
 }
 
 .floating-booking-widget a {

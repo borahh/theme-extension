@@ -56,4 +56,16 @@ document.getElementById('toggleElement').onclick = function () {
 
     const floatingBookWidget = `<div class = 'floating-booking-widget'> <a href = "#rvr_booking_widget-1">book now</a></div>`
     document.body.insertAdjacentHTML('beforeend',floatingBookWidget)
+    const bookingform = document.querySelector('#rvr_booking_widget-1')
+    const observer = new IntersectionObserver((entries) =>{
+        entries.forEach(entry =>{
+            const floatingWidget = document.querySelector('.floating-booking-widget')
+            if(entry.isIntersecting){
+                floatingWidget.style.transform = 'translateY(100%)'
+            }else{
+               floatingWidget.style.transform = 'translateY(0%)'
+            }
+        })
+    })
+    observer.observe(bookingform)
   })
