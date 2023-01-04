@@ -90,7 +90,7 @@ a.rvr-booking-cta:hover {
    border-radius: 5px;
 }
 #ht-ctc-chat{
-	bottom: 80px;
+	bottom: 80px !important;
 }
 @media (min-width: 768px) {
 	.floating-booking-widget{
