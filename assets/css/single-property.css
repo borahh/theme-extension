@@ -83,7 +83,7 @@ a.rvr-booking-cta:hover {
 	grid-template-columns: 1fr 1fr;
 	gap: 10px;
 	align-items: center;
-	justify-items: stretch;
+	justify-items: center;
 }
 
 .floating-booking-widget a {
@@ -94,7 +94,7 @@ a.rvr-booking-cta:hover {
    background: #708670;
    padding: 15px;
    border-radius: 5px;
-
+   width: 100%;
 }
 .floating-booking-widget a:hover{
 	color: white;
