@@ -43,8 +43,8 @@ document.getElementById('toggleElement').onclick = function () {
   window.addEventListener('load', () =>{
      const accs = document.querySelectorAll('.accordion-container')
     accs.forEach(acc => {
-        const btn = accs.querySelector('.accordion-btn')
-        const container = accs.querySelector('.accordion-content')
+        const btn = acc.querySelector('.accordion-btn')
+        const container = acc.querySelector('.accordion-content')
         btn.addEventListener('click', () =>{
             console.log(container.style.height)
         })
