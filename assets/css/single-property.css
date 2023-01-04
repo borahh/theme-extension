@@ -81,6 +81,8 @@ a.rvr-booking-cta:hover {
 	transition: transform 200ms linear;
 	display: flex;
 	gap: 10px;
+	align-items: center;
+	justify-content: space-around;
 }
 
 .floating-booking-widget a {
