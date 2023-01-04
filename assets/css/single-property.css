@@ -58,7 +58,7 @@ a.rvr-booking-cta:hover {
 	display: flex;
 	align-items: center;
 }
-.accordion-container .accordion-content{
+ .accordion-content{
 	height: 0;
 	overflow: hidden;
 }
