@@ -98,3 +98,9 @@ a.rvr-booking-cta:hover {
 		display: none;
 	}
 }
+
+@media (min-width: 320px){
+.rh_property__features_wrap .rh_property__features {
+    flex-direction: row;
+}
+}
