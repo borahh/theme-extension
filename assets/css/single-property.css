@@ -54,7 +54,7 @@ a.rvr-booking-cta:hover {
     transition-duration: 300ms;
 }
 
-.accordion-btn{
+.accordion-container .accordion-btn{
 	display: flex;
 	align-items: center;
 }
@@ -62,7 +62,7 @@ a.rvr-booking-cta:hover {
 	height: 0;
 	overflow: hidden;
 }
-.accordion-btn svg{
+.accordion-container .accordion-btn svg{
 	width: 20px; 
 	margin-left: 20px;
 }
