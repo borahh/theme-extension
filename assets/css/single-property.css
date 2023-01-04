@@ -90,6 +90,9 @@ a.rvr-booking-cta:hover {
    padding: 15px;
    border-radius: 5px;
 }
+.floating-booking-widget a:hover{
+	color: white;
+}
 #ht-ctc-chat{
 	bottom: 80px !important;
 }
