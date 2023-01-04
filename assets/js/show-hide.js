@@ -54,7 +54,7 @@ document.getElementById('toggleElement').onclick = function () {
         })
     })
 
-    const floatingBookWidget = `<div class = 'floating-booking-widget'> <a href = "#rvr_booking_widget-1">book now</a></div>`
+    const floatingBookWidget = `<div class = 'floating-booking-widget'> <a href = "#rvr_booking_widget-1">Book now</a></div>`
     document.body.insertAdjacentHTML('beforeend',floatingBookWidget)
     const bookingform = document.querySelector('#rvr_booking_widget-1')
     const observer = new IntersectionObserver((entries) =>{
