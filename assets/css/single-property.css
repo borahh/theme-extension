@@ -61,6 +61,7 @@ a.rvr-booking-cta:hover {
 .accordion-container .accordion-content{
 	height: 0;
 	overflow: hidden;
+	transition: height 500ms ease-out;
 }
 .accordion-container .accordion-btn svg{
 	width: 20px; 
