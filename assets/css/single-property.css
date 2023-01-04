@@ -73,7 +73,7 @@ a.rvr-booking-cta:hover {
 	background: #F7F7F7;
 	box-shadow: -5px 0px 10px rgba(128, 128, 128, 0.562);
 	padding: 10px 20px;
-	display: fixed;
+	position: fixed;
 	bottom: 0;
 	left: 0;
 	width: 100vw;
