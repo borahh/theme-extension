@@ -53,8 +53,9 @@ document.getElementById('toggleElement').onclick = function () {
             }
         })
     })
-
-    const floatingBookWidget = `<div class = 'floating-booking-widget'> <a href = "#rvr_booking_widget-1">Book now</a></div>`
+   
+    let pricePerNight = document.querySelector('.price-per-night').value
+    const floatingBookWidget = `<div class = 'floating-booking-widget'> <div class = 'price'>starting from <br> <span>${pricePerNight}</span></div><a href = "#rvr_booking_widget-1">Book now</a></div>`
     document.body.insertAdjacentHTML('beforeend',floatingBookWidget)
     const bookingform = document.querySelector('#rvr_booking_widget-1')
     const observer = new IntersectionObserver((entries) =>{

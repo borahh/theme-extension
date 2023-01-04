@@ -79,6 +79,8 @@ a.rvr-booking-cta:hover {
 	width: 100vw;
 	z-index: 9999999999;
 	transition: transform 200ms linear;
+	display: flex;
+	gap: 10px;
 }
 
 .floating-booking-widget a {
@@ -89,9 +91,20 @@ a.rvr-booking-cta:hover {
    background: #708670;
    padding: 15px;
    border-radius: 5px;
+
 }
 .floating-booking-widget a:hover{
 	color: white;
+}
+.floating-booking-widget .price{
+	font-size: 12px;
+	font-weight: 300;
+}
+.floating-booking-widget .price span{
+	color: #708670;
+	font-weight: 500;
+	font-size: 18px;
+	margin-top: 10px;
 }
 #ht-ctc-chat{
 	bottom: 80px !important;
