@@ -46,7 +46,7 @@ document.getElementById('toggleElement').onclick = function () {
         const btn = acc.querySelector('.accordion-btn')
         const container = acc.querySelector('.accordion-content')
         btn.addEventListener('click', () =>{
-            if(container.style.height){
+            if(!container.style.height){
                 container.style.height = container.scrollHeight + 'px'
             }else{
                 container.style.height = null
