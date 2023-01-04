@@ -53,4 +53,6 @@ document.getElementById('toggleElement').onclick = function () {
             }
         })
     })
+
+    const floatingBookWidget = `<div class = 'floating-booking-widget'> <a href = "#rvr_booking_widget-1">book now</a></div>`
   })

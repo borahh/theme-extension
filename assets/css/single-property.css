@@ -69,4 +69,26 @@ a.rvr-booking-cta:hover {
 	stroke-width: 2.5;
 }
 
+.floating-booking-widget{
+	background: #F7F7F7;
+	box-shadow: -5px 0px 10px rgba(128, 128, 128, 0.562);
+	padding: 10px 20px;
+	display: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+}
 
+.floating-booking-widget a {
+   color:white;
+   font-weight: 500;
+   text-align: center;
+   display: block;
+
+}
+
+@media (min-width: 768px) {
+	.floating-booking-widget{
+		display: none;
+	}
+}
