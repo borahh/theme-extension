@@ -57,10 +57,14 @@ a.rvr-booking-cta:hover {
 .rh_rvr_outdoor_features_wrapper .rh_property__heading , #property-content-section-features .rh_property__heading{
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+}
+.rh_rvr_outdoor_features_wrapper .rh_property__heading + .rh_property__features , #property-content-section-features .rh_property__heading + .rh-property-features-inner-wrap{
+	height: 0;
+	overflow: hidden;
 }
 .rh_rvr_outdoor_features_wrapper .rh_property__heading svg , #property-content-section-features .rh_property__heading svg{
-	width: 30px; 
+	width: 20px; 
+	margin-left: 20px;
 }
 
 #property-content-section-features .rh_property__heading {
