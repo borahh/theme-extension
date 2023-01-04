@@ -86,9 +86,12 @@ a.rvr-booking-cta:hover {
    text-align: center;
    display: block;
    background: #708670;
-   padding: 20px;
+   padding: 15px;
+   border-radius: 5px;
 }
-
+#ht-ctc-chat{
+	bottom: 80px;
+}
 @media (min-width: 768px) {
 	.floating-booking-widget{
 		display: none;
