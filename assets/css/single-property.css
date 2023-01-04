@@ -105,8 +105,9 @@ a.rvr-booking-cta:hover {
 .floating-booking-widget .price span{
 	color: #708670;
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 24px;
 	margin-top: 10px;
+	display: block;
 }
 #ht-ctc-chat{
 	bottom: 80px !important;
