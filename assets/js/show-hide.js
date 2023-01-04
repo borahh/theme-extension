@@ -33,3 +33,13 @@ document.getElementById('toggleElement').onclick = function () {
 
     }
   }
+
+
+ const toggleAccordian = () =>{
+  
+ }
+
+
+  window.addEventListener('load', () =>{
+     
+  })

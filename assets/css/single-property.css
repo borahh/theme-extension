@@ -54,15 +54,15 @@ a.rvr-booking-cta:hover {
     transition-duration: 300ms;
 }
 
-.rh_rvr_outdoor_features_wrapper .rh_property__heading , #property-content-section-features .rh_property__heading{
+.accordion-btn{
 	display: flex;
 	align-items: center;
 }
-.rh_rvr_outdoor_features_wrapper .rh_property__heading + .rh_property__features , #property-content-section-features .rh_property__heading + .rh-property-features-inner-wrap{
+.accordion-container .accordion-content{
 	height: 0;
 	overflow: hidden;
 }
-.rh_rvr_outdoor_features_wrapper .rh_property__heading svg , #property-content-section-features .rh_property__heading svg{
+.accordion-btn svg{
 	width: 20px; 
 	margin-left: 20px;
 }
