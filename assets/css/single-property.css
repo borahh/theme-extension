@@ -77,7 +77,7 @@ a.rvr-booking-cta:hover {
 	bottom: 0;
 	left: 0;
 	width: 100vw;
-	z-index: 100;
+	z-index: 9999999999;
 }
 
 .floating-booking-widget a {
@@ -85,7 +85,8 @@ a.rvr-booking-cta:hover {
    font-weight: 500;
    text-align: center;
    display: block;
-
+   background: #708670;
+   padding: 20px;
 }
 
 @media (min-width: 768px) {
