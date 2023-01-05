@@ -8,6 +8,8 @@
 	display: none;
 }
 
-.rh_mod_sfoi_form_rvr {
-    width: calc(100% - 80px);
+@media (max-width: 767px) {
+	.rh_mod_sfoi_form.rh_mod_sfoi_form_rvr {
+		width: calc(100% - 80px);
+	}
 }
