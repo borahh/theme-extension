@@ -7,3 +7,7 @@
 .rh_property__meta.rvr_min_stay {
 	display: none;
 }
+
+.rh_mod_sfoi_form_rvr {
+    width: calc(100% - 80px);
+}
