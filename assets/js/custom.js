@@ -1,1 +1,3 @@
-document.querySelector('.rh_prop_search__selectwrap input').remove();
+jQuery(document).ready(function(){
+    console.log('req');
+});
