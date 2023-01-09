@@ -58,7 +58,7 @@ function my_load_scripts($hook) {
 	}
 	wp_enqueue_style( 'custom', 	plugins_url( 'assets/css/custom.css', 	 __FILE__ ), false, $custom_css_ver );
 	wp_enqueue_script( 'calendar', plugins_url( 'assets/js/calendar.js', __FILE__ ), array(), $my_js_ver );
-	wp_enqueue_script( 'custom', plugins_url( 'assets/js/custom.js', __FILE__ ), array(), $customJs_ver );
+	wp_enqueue_script( 'theme-extension', plugins_url( 'assets/js/custom.js', __FILE__ ), array(), $customJs_ver );
 	wp_enqueue_style( 'calendar', 	plugins_url( 'assets/css/calendar.css', 	 __FILE__ ), false, $my_css_ver );
 	// wp_enqueue_style( 'UNIQUE_NAME_HERE', 	plugins_url( 'assets/css/calendar.css', 	 __FILE__ ), false,   $UNIQUE_VAR_HERE );
 
