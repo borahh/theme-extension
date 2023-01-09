@@ -16,6 +16,7 @@
 
 .borah_mobile_cols {
 	display: flex;
+	width: 30%;
 }
 
 @media (max-width: 767px) {
