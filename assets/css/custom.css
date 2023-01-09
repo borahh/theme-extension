@@ -14,9 +14,12 @@
 	}
 }
 
-
 .borah_mobile_cols {
 	display: flex;
-	width: 100%;
 }
 
+@media (max-width: 767px) {
+	.borah_mobile_cols {
+		width: 100%;
+	}
+}
