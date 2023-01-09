@@ -1,1 +1,1 @@
-console.log('Hello');
+document.querySelector('.rh_prop_search__selectwrap input').remove();
