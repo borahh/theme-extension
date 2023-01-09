@@ -24,3 +24,7 @@
 		width: 100%;
 	}
 }
+
+.SFOI__form.rh_sfoi_advance_search_form.advance-search-form .bs-searchbox {
+    display: none;
+}
