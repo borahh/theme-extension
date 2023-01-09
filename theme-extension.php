@@ -43,6 +43,7 @@ function my_load_scripts($hook) {
 	
 	// PDF content
 	$pdfContent_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/pdf-downloader.js' ));
+	$customJs_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/custom.js' ));
 
 	$showJs_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/show-hide.js' ));
 	$custom_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/custom.css' ));
@@ -57,6 +58,7 @@ function my_load_scripts($hook) {
 	}
 	wp_enqueue_style( 'custom', 	plugins_url( 'assets/css/custom.css', 	 __FILE__ ), false, $custom_css_ver );
 	wp_enqueue_script( 'calendar', plugins_url( 'assets/js/calendar.js', __FILE__ ), array(), $my_js_ver );
+	wp_enqueue_script( 'custom', plugins_url( 'assets/js/custom.js', __FILE__ ), array(), $customJs_ver );
 	wp_enqueue_style( 'calendar', 	plugins_url( 'assets/css/calendar.css', 	 __FILE__ ), false, $my_css_ver );
 	// wp_enqueue_style( 'UNIQUE_NAME_HERE', 	plugins_url( 'assets/css/calendar.css', 	 __FILE__ ), false,   $UNIQUE_VAR_HERE );
 
