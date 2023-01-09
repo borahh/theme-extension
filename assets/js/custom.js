@@ -1,3 +1,1 @@
-jQuery(document).ready(function(){
-    console.log(jQuery('.rh_prop_search__selectwrap input'));
-});
+document.querySelector('.rh_prop_search__selectwrap .bs-searchbox').style.display="none";
