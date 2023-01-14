@@ -115,3 +115,9 @@ a.rvr-booking-cta:hover {
     flex-direction: row !important;
 }
 }
+
+@media (min-width: 1140px){
+	.rh_banner__wrap {
+		display: none;
+	}
+}
