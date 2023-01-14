@@ -477,7 +477,7 @@ const intersectionObserver = new IntersectionObserver((entries) =>{
 }, {rootMargin: '20% 20% 0% 0%'})
 
 const navLinks = [
-    {id:'#gallary', name: 'gallary'},
+    {id:'#gallary', name: 'Gallery'},
     {id:'#property-content-section-content', name: 'description'},
     {id:'#property-content-section-features', name: 'Features'},
     {id:'#servies', name: 'services'},
