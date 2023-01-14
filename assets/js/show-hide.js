@@ -54,7 +54,7 @@ document.getElementById('toggleElement').onclick = function () {
         })
     })
    
-    let pricePerNight = document.querySelector('.rhr_page_cta-wraper .rh_page__property_price .price').value
+    let pricePerNight = document.querySelector('.price-per-night').value
     const floatingBookWidget = `<div class = 'floating-booking-widget'> <div class = 'price'>From <br> <span>$${pricePerNight}</span></div><a class="rvr-booking-cta" href = "#rvr_booking_widget-1">Book now</a></div>`
     document.body.insertAdjacentHTML('beforeend',floatingBookWidget)
     const bookingform = document.querySelector('#rvr_booking_widget-1')
