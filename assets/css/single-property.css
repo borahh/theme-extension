@@ -117,7 +117,7 @@ a.rvr-booking-cta:hover {
 }
 
 @media (min-width: 1140px){
-	.rh_banner__wrap {
-		display: none;
+	.rh_banner .rh_banner__wrap {
+		display: none !important;
 	}
-}
+	}
