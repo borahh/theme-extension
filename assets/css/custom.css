@@ -28,3 +28,7 @@
 .SFOI__form.rh_sfoi_advance_search_form.advance-search-form .bs-searchbox {
     display: none;
 }
+
+.floating-booking-widget .price {
+	color: #192A5F;
+}
