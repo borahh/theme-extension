@@ -30,6 +30,7 @@
 }
 
 require_once BORAHH_PLUGIN_DIR . 'inc/pdf-generator.php';
+require_once BORAHH_PLUGIN_DIR . 'inc/shortcodes/availability-calendar.php';
 
 /**
  * Never worry about cache again!
