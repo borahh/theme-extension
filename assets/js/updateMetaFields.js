@@ -9,7 +9,8 @@ jQuery(document).ready(function($) {
     const target = $(`[name="rvr_seasonal_plans\\[${num1}\\]\\[rvr_seasonal_plans_group\\]\\[${num2}\\]\\[rvr_plan_night_price\\]"]`);
     if (!target.length) return;
     const val = parseInt(e.target.value);
-    console.log(val);
-    target.eq(0).val(isNaN(val) ? 0 : Math.round(val/7));
+	const perDay = (val / 7);
+    console.log(perDay);
+    target.eq(0).val(isNaN(val) ? 0 : perDay.toFixed(2));
   })
 });
