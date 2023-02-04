@@ -59,7 +59,7 @@ function my_load_scripts($hook) {
 
 	}
 	if ( is_home()  ) {
-		wp_enqueue_script( 'availability-calendar', plugins_url( 'assets/js/availability-calendar.js', __FILE__ ), array('jquery'), $availability_ver, true );	
+		wp_enqueue_script( 'availability-calendar', plugins_url( 'assets/js/availability-calendar.js', __FILE__ ), array('jquery'), $availability_ver );	
 
 	}
 	wp_enqueue_style( 'custom', 	plugins_url( 'assets/css/custom.css', 	 __FILE__ ), false, $custom_css_ver );
