@@ -45,6 +45,7 @@ function my_load_scripts($hook) {
 	// PDF content
 	$pdfContent_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/pdf-downloader.js' ));
 	$customJs_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/custom.js' ));
+	$availability_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/availability-calendar.js' ));
 
 	$showJs_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/show-hide.js' ));
 	$custom_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/custom.css' ));
@@ -52,7 +53,13 @@ function my_load_scripts($hook) {
 
 	// Run code only for Single post page
 	if ( is_single() && 'property' == get_post_type() ) {
-		wp_enqueue_script( 'pdfGenrator', plugins_url( 'assets/js/pdf-downloader.js', __FILE__ ), NULL, $pdfContent_ver );	
+		wp_enqueue_script( 'pdfGenrator', plugins_url( 'assets/js/pdf-downloader.js', __FILE__ ), NULL, $availability_ver );	
+		wp_enqueue_script( 'showHide', plugins_url( 'assets/js/show-hide.js', __FILE__ ), NULL, $showJs_ver, true );	
+		wp_enqueue_style( 'single-property', 	plugins_url( 'assets/css/single-property.css', 	 __FILE__ ), false, $singleProperty_css_ver );
+
+	}
+	if ( is_home()  ) {
+		wp_enqueue_script( 'availability-calendar', plugins_url( 'assets/js/availability-calendar.js', __FILE__ ), array('jquery'), $pdfContent_ver, true );	
 		wp_enqueue_script( 'showHide', plugins_url( 'assets/js/show-hide.js', __FILE__ ), NULL, $showJs_ver, true );	
 		wp_enqueue_style( 'single-property', 	plugins_url( 'assets/css/single-property.css', 	 __FILE__ ), false, $singleProperty_css_ver );
 
