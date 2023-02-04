@@ -58,10 +58,8 @@ function my_load_scripts($hook) {
 		wp_enqueue_style( 'single-property', 	plugins_url( 'assets/css/single-property.css', 	 __FILE__ ), false, $singleProperty_css_ver );
 
 	}
-	if ( is_home()  ) {
+	
 		wp_enqueue_script( 'availability-calendar', plugins_url( 'assets/js/availability-calendar.js', __FILE__ ), array('jquery'), $availability_ver );	
-
-	}
 	wp_enqueue_style( 'custom', 	plugins_url( 'assets/css/custom.css', 	 __FILE__ ), false, $custom_css_ver );
 	wp_enqueue_script( 'calendar', plugins_url( 'assets/js/calendar.js', __FILE__ ), array(), $my_js_ver );
 	wp_enqueue_script( 'theme-extension', plugins_url( 'assets/js/custom.js', __FILE__ ), array('jquery'), $customJs_ver , true);
