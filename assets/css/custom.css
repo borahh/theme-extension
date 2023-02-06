@@ -40,6 +40,6 @@
 .rh_property__ava_calendar_wrap .calendar-guide ul li.reserved-days::before {
 	background-color: red !important;
 }
-.availability-calendar table td.unavailable {
+.availability-calendar table td.unavailable, div.daterangepicker .calendar-table td.reserved {
 	background-color: red !important;
 }
