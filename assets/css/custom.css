@@ -38,8 +38,8 @@
 }
 
 .rh_property__ava_calendar_wrap .calendar-guide ul li.reserved-days::before {
-	color: red;
+	background-color: red;
 }
 .availability-calendar table td.unavailable {
-	color: red;
+	background-color: red;
 }
