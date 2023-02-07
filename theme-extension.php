@@ -1,6 +1,6 @@
 <?php
    /*
-   Plugin Name: Theme Extension
+   Plugin Name: Theme Extension - Palmier
    Plugin URI: NA
    description: NA
    Version: 1.2
