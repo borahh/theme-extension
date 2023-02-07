@@ -59,7 +59,7 @@ function my_load_scripts($hook) {
 		wp_enqueue_style( 'single-property', 	plugins_url( 'assets/css/single-property.css', 	 __FILE__ ), false, $singleProperty_css_ver );
 
 	}
-	if ( is_home('/property-status/for-sale')) {
+	if ( is_tax( 'property-status', 'for-sale' )) {
 		wp_enqueue_script( 'for-sale', plugins_url( 'assets/css/for-sale.css', __FILE__ ), NULL, $forsale_ver );	
 	}
 	
