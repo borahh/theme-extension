@@ -58,9 +58,9 @@ function my_load_scripts($hook) {
 
 	}
 
-	// if ( is_tax( 'property-status', 'for-sale' )) {
-	// 	wp_enqueue_style( 'for-sale', 	plugins_url( 'assets/css/for-sale.css', 	 __FILE__ ), false, $forsale_ver );
-	// }
+	if ( is_tax( 'property-status', 'for-sale' )) {
+		wp_enqueue_style( 'for-sale', 	plugins_url( 'assets/css/for-sale.css', 	 __FILE__ ), false, $forsale_ver );
+	}
 	wp_enqueue_style( 'custom', 	plugins_url( 'assets/css/custom.css', 	 __FILE__ ), false, $custom_css_ver );
 	wp_enqueue_script( 'calendar', plugins_url( 'assets/js/calendar.js', __FILE__ ), array(), $my_js_ver );
 	wp_enqueue_script( 'theme-extension', plugins_url( 'assets/js/custom.js', __FILE__ ), array('jquery'), $customJs_ver , true);
