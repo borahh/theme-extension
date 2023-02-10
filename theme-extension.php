@@ -48,6 +48,7 @@ function my_load_scripts($hook) {
 	$showJs_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/show-hide.js' ));
 	$custom_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/custom.css' ));
 	$forsale_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/for-sale.css' ));
+	$forrent_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/for-rent.css' ));
 	$singleProperty_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/single-property.css' ));
 
 	// Run code only for Single post page
@@ -60,6 +61,9 @@ function my_load_scripts($hook) {
 
 	if ( is_tax( 'property-status', 'for-sale' )) {
 		wp_enqueue_style( 'for-sale', 	plugins_url( 'assets/css/for-sale.css', 	 __FILE__ ), false, $forsale_ver );
+	}
+	if ( is_single() && is_tax( 'property-status', 'for-sale' )) {
+		wp_enqueue_style( 'for-rent', 	plugins_url( 'assets/css/for-rent.css', 	 __FILE__ ), false, $forrent_ver );
 	}
 	wp_enqueue_style( 'custom', 	plugins_url( 'assets/css/custom.css', 	 __FILE__ ), false, $custom_css_ver );
 	wp_enqueue_script( 'calendar', plugins_url( 'assets/js/calendar.js', __FILE__ ), array(), $my_js_ver );
