@@ -66,7 +66,7 @@ function my_load_scripts($hook) {
 	if ( is_single() && 'property' == get_post_type() && has_term( 'for-rent', 'property-status' )) {
 		wp_enqueue_style( 'for-rent', 	plugins_url( 'assets/css/for-rent.css', 	 __FILE__ ), false, $forrent_ver );
 	}
-	if ( is_single() && 'property' == get_post_type() && has_term( 'for-rent', 'property-status' )) {
+	if ( is_single() && 'property' == get_post_type() && has_term( 'for-sell', 'property-status' )) {
 		wp_enqueue_style( 'for-sell-properties', 	plugins_url( 'assets/css/for-sell-properties.css', 	 __FILE__ ), false, $forselprop_ver );
 	}
 	wp_enqueue_style( 'custom', 	plugins_url( 'assets/css/custom.css', 	 __FILE__ ), false, $custom_css_ver );
