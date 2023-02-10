@@ -28,7 +28,7 @@ function my_load_scripts($hook) {
 	$custom_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/custom.css' ));
 
 	// Run code only for Single post page
-	if ( is_single() && 'property' == get_post_type() ) {
+	if ( is_single() && 'voiture-location' == get_post_type() ) {
 		wp_enqueue_script( 'showHide', plugins_url( 'assets/js/show-hide.js', __FILE__ ), NULL, $showJs_ver, true );	
 
 	}
