@@ -27,11 +27,8 @@ function my_load_scripts($hook) {
 	$showJs_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/show-hide.js' ));
 	$custom_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/custom.css' ));
 
-	// Run code only for Single post page
-	if ( is_single() ) {
 		wp_enqueue_script( 'showHide', plugins_url( 'assets/js/show-hide.js', __FILE__ ), NULL, $showJs_ver, true );	
 
-	}
 	wp_enqueue_style( 'custom', 	plugins_url( 'assets/css/custom.css', 	 __FILE__ ), false, $custom_css_ver );
 
 }
