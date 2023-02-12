@@ -1,20 +1,13 @@
 
-.floating-booking-widget .price {
-	color: #192A5F;
-}
 
-.floating-booking-widget .price span {
-	color: #192A5F;
-}
-
-.floatingBookBtn{
+.floating-booking-widget{
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	padding: 20px;
-
+   transition: transform 300 linear;
 }
-.floatingBookBtn a{
+.floatingBooking-widget a{
 	background-color: #DC006E;
 	color: white;
 	font-weight: bold;
