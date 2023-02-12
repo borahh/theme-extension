@@ -16,4 +16,10 @@ window.addEventListener('load', () =>{
         })
     })
     observer.observe(bookingform)
+
+
+    // booking button
+    
+    const bookBtn  = `<div class = 'floatingBookBtn'><a href = "#scrollTo">Book Now</a></div>`
+    document.body.insertAdjacentHTML('beforeend',bookBtn)
   })
