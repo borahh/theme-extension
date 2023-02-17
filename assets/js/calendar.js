@@ -467,13 +467,11 @@ document.querySelector('.property-detail-slider-wrapper').setAttribute('id', 'ga
 const intersectionObserver = new IntersectionObserver((entries) =>{
      entries.forEach(entry =>{
         const id = entry.target.getAttribute('id')
-         if (id) {
-            const link = document.querySelector(`a[href= "#${id}"]`)
+        const link = document.querySelector(`a[href= "#${id}"]`)
         if(entry.isIntersecting){
             document.querySelectorAll('#page_nav a').forEach(item => item.classList.remove('active'))
             link.classList.add('active')
 
-        }
         }
      })
 }, {rootMargin: '20% 20% 0% 0%'})
@@ -490,9 +488,12 @@ const navLinks = [
   {id:'#rvr_booking_widget-1', name: 'book'},
 ]
 let navLinksHTML  = ' ';
-navLinks.forEach(item =>{
-    intersectionObserver.observe(document.querySelector(item.id))
-    navLinksHTML += `<li><a href = '${item.id}' >${item.name}</a> `
+    navLinks.forEach(item => {
+        const getItem = document.querySelector(item.id);
+        if (getItem) {
+            intersectionObserver.observe(getItem)
+            navLinksHTML += `<li><a href = '${item.id}' >${item.name}</a> `
+    }
 })
 const pageNav = `<nav id = 'page_nav' >
    <ul class = 'rh_wrap--padding'>
