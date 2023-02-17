@@ -11,6 +11,6 @@ jQuery(document).ready(function($) {
     const val = parseInt(e.target.value);
 	const perDay = (val / 7);
     console.log(perDay);
-    target.eq(0).val(isNaN(val) ? 0 : perDay.toFixed(2));
+    target.eq(0).val(isNaN(val) ? 0 : perDay.toFixed(7));
   })
 });
