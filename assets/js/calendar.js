@@ -467,11 +467,13 @@ document.querySelector('.property-detail-slider-wrapper').setAttribute('id', 'ga
 const intersectionObserver = new IntersectionObserver((entries) =>{
      entries.forEach(entry =>{
         const id = entry.target.getAttribute('id')
-        const link = document.querySelector(`a[href= "#${id}"]`)
+         if (id) {
+            const link = document.querySelector(`a[href= "#${id}"]`)
         if(entry.isIntersecting){
             document.querySelectorAll('#page_nav a').forEach(item => item.classList.remove('active'))
             link.classList.add('active')
 
+        }
         }
      })
 }, {rootMargin: '20% 20% 0% 0%'})
