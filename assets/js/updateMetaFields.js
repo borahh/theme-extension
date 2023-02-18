@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-  $('body').on('keyup', function (e) {
+  $('body').on('focus', function (e) {
      const id = $(e.target).attr('name');
     if (!id) return;
     const matches = id.match(/rvr_seasonal_plans\[(\d*)\]\[rvr_seasonal_plans_group\]\[(\d*)\]\[rvr_plan_week_price\]/);
