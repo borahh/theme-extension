@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
     
    
     let value = document.querySelector('.vrc_price').value
-    const floatingBookWidget = `<div class = 'floating-booking-widget'> <div class = 'price'>From <br> <span>$${value}</span></div><a class="rvr-booking-cta" href = "#scrollTo">Book now</a></div>`
+    const floatingBookWidget = `<div class = 'floating-booking-widget'> <a class="rvr-booking-cta" href = "#scrollTo">Book now</a></div>`
     document.body.insertAdjacentHTML('beforeend',floatingBookWidget)
     const bookingform = document.querySelector('#scrollTo')
     const observer = new IntersectionObserver((entries) =>{
@@ -18,6 +18,5 @@ window.addEventListener('load', () => {
     })
     observer.observe(bookingform)
 
-  console.log()
   
   })
