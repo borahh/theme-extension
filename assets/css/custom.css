@@ -6,6 +6,8 @@
 	left: 0;
 	padding: 20px;
    transition: transform 300 linear;
+   width: 100%;
+   background: white;
 }
 .floatingBooking-widget a{
 	background-color: #DC006E;
