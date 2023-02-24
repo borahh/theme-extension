@@ -29,7 +29,7 @@ function my_load_scripts($hook) {
 
 		wp_enqueue_script( 'extension', plugins_url( 'assets/js/custom.js', __FILE__ ), NULL, $showJs_ver, true );	
 
-	wp_enqueue_style( 'custom', 	plugins_url( 'assets/css/custom.css', 	 __FILE__ ), false, $custom_css_ver );
+	wp_enqueue_style( 'extension', 	plugins_url( 'assets/css/custom.css', 	 __FILE__ ), false, $custom_css_ver );
 
 }
 add_action('wp_enqueue_scripts', 'my_load_scripts');
