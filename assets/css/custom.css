@@ -6,6 +6,7 @@
 	left: 0;
 	padding: 10px 20px;
    transition: transform 300ms linear;
+   transform: translateY(100%);
    width: 100%;
    background: white;
    z-index: 100;
