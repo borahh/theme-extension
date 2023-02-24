@@ -5,8 +5,7 @@
 	bottom: 0;
 	left: 0;
 	padding: 10px 20px;
-   transition: transform 300 linear;
-   transform: translateY(0%);
+   transition: transform 300ms linear;
    width: 100%;
    background: white;
    z-index: 100;
