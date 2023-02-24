@@ -1,4 +1,5 @@
-window.addEventListener('load', () =>{
+console.log('Script Loaded');
+window.addEventListener('load', () => {
     
    
     let value = document.querySelector('.vrc_price').value
