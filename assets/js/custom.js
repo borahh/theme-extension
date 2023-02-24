@@ -18,6 +18,6 @@ window.addEventListener('load', () => {
     })
     observer.observe(bookingform)
 
-
+  console.log()
   
   })
