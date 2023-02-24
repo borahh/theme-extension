@@ -4,17 +4,25 @@
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	padding: 20px;
+	padding: 10px 20px;
    transition: transform 300 linear;
    width: 100%;
    background: white;
+   z-index: 100;
+   box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.548);
 }
 .floating-booking-widget a{
 	background-color: #DC006E;
 	color: white;
 	font-weight: bold;
-	border-radius: 10px;
+	border-radius: 100px;
 	display: block;
 	padding: 15px 20px;
 	text-align: center;
+}
+
+@media(min-width: 1024px){
+	.floating-booking-widget{
+		display: none;
+	}
 }
