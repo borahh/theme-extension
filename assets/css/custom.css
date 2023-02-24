@@ -21,7 +21,7 @@
 	text-align: center;
 }
 
-@media(min-width: 1024px){
+@media(min-width: 768px){
 	.floating-booking-widget{
 		display: none;
 	}
