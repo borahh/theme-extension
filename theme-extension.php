@@ -33,6 +33,7 @@ require_once BORAHH_PLUGIN_DIR . 'inc/pdf-generator.php';
 require_once BORAHH_PLUGIN_DIR . 'inc/location.php';
 require_once BORAHH_PLUGIN_DIR . 'inc/personalized-drag.php';
 require_once BORAHH_PLUGIN_DIR . 'inc/duplicate-seasons.php';
+require_once BORAHH_PLUGIN_DIR . 'inc/qg_shortcode.php';
 
 /**
  * Never worry about cache again!
