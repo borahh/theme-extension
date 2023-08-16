@@ -3,8 +3,8 @@
    Plugin Name: Theme Extension
    Plugin URI: NA
    description: NA
-   Version: 1.2
-   Author: H.Borah
+   Version: 1.5
+   Author: Himanshu Borah
    Author URI: NA
    License: GPL2
    */
@@ -30,6 +30,8 @@
 }
 
 require_once BORAHH_PLUGIN_DIR . 'inc/pdf-generator.php';
+require_once BORAHH_PLUGIN_DIR . 'inc/location.php';
+require_once BORAHH_PLUGIN_DIR . 'inc/personalized-drag.php';
 
 /**
  * Never worry about cache again!
@@ -46,6 +48,8 @@ function my_load_scripts($hook) {
 	$customJs_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/custom.js' ));
 
 	$showJs_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/show-hide.js' ));
+	$pricetabs_js_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/price-tabs.js' ));
+	$pricetabs_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/price-tabs.css' ));
 	$custom_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/custom.css' ));
 	$singleProperty_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/single-property.css' ));
 	$selection_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/css/selection.css' ));
@@ -62,7 +66,9 @@ function my_load_scripts($hook) {
 
 	}
 	wp_enqueue_style( 'custom', 	plugins_url( 'assets/css/custom.css', 	 __FILE__ ), false, $custom_css_ver );
+	wp_enqueue_style( 'price-tabs', 	plugins_url( 'assets/css/price-tabs.css', 	 __FILE__ ), false, $pricetabs_css_ver );
 	wp_enqueue_script( 'calendar', plugins_url( 'assets/js/calendar.js', __FILE__ ), array(), $my_js_ver );
+	wp_enqueue_script( 'price-tabs', plugins_url( 'assets/js/price-tabs.js', __FILE__ ), array(), $pricetabs_js_ver );
 	wp_enqueue_script( 'theme-extension', plugins_url( 'assets/js/custom.js', __FILE__ ), array('jquery'), $customJs_ver , true);
 	wp_enqueue_style( 'calendar', 	plugins_url( 'assets/css/calendar.css', 	 __FILE__ ), false, $my_css_ver );
 	// wp_enqueue_style( 'UNIQUE_NAME_HERE', 	plugins_url( 'assets/css/calendar.css', 	 __FILE__ ), false,   $UNIQUE_VAR_HERE );

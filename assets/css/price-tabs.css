@@ -1,0 +1,31 @@
+.tablinks, .day-week-tablinks {
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    color: #333;  /* Add color to the text for better visibility */
+}
+
+.tablinks:hover, .day-week-tablinks:hover {
+    background-color: #d2bf7f;  /* Changed to your theme accent color */
+    color: #fff;  /* Change the text color to white for contrast */
+}
+
+.tablinks.active, .day-week-tablinks.active {
+    background-color: #d2bf7f;  /* Changed to your theme accent color */
+    color: #fff;  /* Change the text color to white for contrast */
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tabs {
+    margin: 30px 0px 20px 12px;
+}
+
+#prices table .per_day_price span, #prices table .per_week_price span {
+    display: none !important;
+}

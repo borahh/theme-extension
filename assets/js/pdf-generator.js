@@ -1,29 +1,26 @@
 function fnprint() {
-    document.getElementById("iframeid").contentWindow.print();
-
+  document.getElementById("iframeid").contentWindow.print();
 }
 
-
 function loadWindowFromURL(URL, booking_id) {
-    let windowName = 'w_' + Date.now() + Math.floor(Math.random() * 100000).toString();
-    var form = document.createElement("form");
-    form.setAttribute("method", "post");
-    form.setAttribute("action", URL);
+  let windowName =
+    "w_" + Date.now() + Math.floor(Math.random() * 100000).toString();
+  var form = document.createElement("form");
+  form.setAttribute("method", "post");
+  form.setAttribute("action", URL);
 
-    form.setAttribute("target", windowName);
+  form.setAttribute("target", windowName);
 
-    var bookingID = document.createElement("input"); 
-    bookingID.setAttribute("type", "hidden");
-    bookingID.setAttribute("name", "booking_id");
-    bookingID.setAttribute("value", booking_id);
+  var bookingID = document.createElement("input");
+  bookingID.setAttribute("type", "hidden");
+  bookingID.setAttribute("name", "booking_id");
+  bookingID.setAttribute("value", booking_id);
 
+  form.appendChild(bookingID);
 
-    form.appendChild(bookingID);
+  document.body.appendChild(form);
 
+  window.open("", windowName);
 
-    document.body.appendChild(form);
-
-    window.open('', windowName);
-
-    form.submit();
+  form.submit();
 }

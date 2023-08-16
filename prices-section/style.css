@@ -9,7 +9,12 @@
   font-family: "Rubik", sans-serif;
   text-transform: capitalize;
 }
-#prices table, #prices thead, #prices tbody, #prices tr, #prices td, #prices th {
+#prices table,
+#prices thead,
+#prices tbody,
+#prices tr,
+#prices td,
+#prices th {
   display: block;
   border: none !important;
 }
@@ -21,7 +26,8 @@
   font-weight: 500;
   color: #444444;
 }
-#prices table .per_day_price, #prices table .per_week_price {
+#prices table .per_day_price,
+#prices table .per_week_price {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -77,11 +83,13 @@
     display: grid;
     grid-template-columns: 3fr 1fr 1fr;
   }
-  #prices table .per_day_price, #prices table .per_week_price {
+  #prices table .per_day_price,
+  #prices table .per_week_price {
     display: inline;
     text-align: center;
   }
-  #prices table .per_day_price span, #prices table .per_week_price span {
+  #prices table .per_day_price span,
+  #prices table .per_week_price span {
     display: none;
   }
   #prices .currency_type_selector_container {
@@ -91,4 +99,4 @@
     grid-column: span 2;
     margin-top: 0px;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
