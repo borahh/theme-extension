@@ -19,10 +19,20 @@ function openYear(evt, year) {
   // Get the selected room number
   var selectedRoom = document.getElementById("rvr-guests").value;
 
+  var yearSelectorPart;
+  if (year.includes(",")) {
+    // For multiple years, we create a combined selector
+    var years = year.split(",");
+    yearSelectorPart = years.map((y) => ".year-" + y.trim()).join(", ");
+  } else {
+    yearSelectorPart = ".year-" + year;
+  }
+
   // Get all elements with the class "year-" + year and "data-room=" + selectedRoom and show them
   var yearRoomElements = document.querySelectorAll(
-    ".year-" + year + '[data-room="' + selectedRoom + '"]'
+    yearSelectorPart + '[data-room="' + selectedRoom + '"]'
   );
+
   for (i = 0; i < yearRoomElements.length; i++) {
     yearRoomElements[i].style.display = "grid";
   }
