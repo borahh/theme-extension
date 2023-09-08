@@ -121,6 +121,32 @@ function showDayOrWeek(type) {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+    var currentYear = new Date().getFullYear();
+
+    // Try to select the tablink for the current year
+    var currentYearTablink = document.querySelector(
+      ".tablinks.year-" + currentYear
+    );
+
+    // If a tablink for the current year exists, simulate a click on it
+    if (currentYearTablink) {
+      currentYearTablink.click();
+    } else {
+      console.log(document.querySelector(".tablinks"));
+      // If a tablink for the current year does not exist, simulate a click on the first tablink
+      document.querySelector(".tablinks").click();
+    }
+  }, 500); // 500 milliseconds delay
+
+  // Simulate a change event on the "rvr-guests" select field
+  var event = new Event("change");
+  document.getElementById("rvr-guests").dispatchEvent(event);
+  // Simulate a click on the "Per Day" tab
+  document.querySelector(".day-week-tablinks.per-week").click();
+});
+
 window.onload = function () {
   var currentYear = new Date().getFullYear();
 
