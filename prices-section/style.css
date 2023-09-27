@@ -37,6 +37,10 @@
 #prices tbody tr:nth-child(even) {
   background: #f7f7f7;
 }
+
+.availability-calendar table tbody tr:last-of-type {
+  display: contents !important;
+}
 #prices tbody tr {
   display: grid;
   padding: 12px;
