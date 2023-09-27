@@ -1,3 +1,9 @@
+const selectWrap = document.querySelector(
+  ".rh_prop_search__selectwrap .bs-searchbox"
+);
+if (selectWrap) {
+  selectWrap.style.display = "none";
+}
 let currentStep = 1;
 
 document.addEventListener("DOMContentLoaded", function () {
