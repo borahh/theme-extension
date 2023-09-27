@@ -8,15 +8,31 @@ let currentStep = 1;
 
 function navigate(event, direction) {
   event.preventDefault();
-  document.getElementById("step" + currentStep).style.display = "block"; // Show the current step
-  document.getElementById("action" + currentStep).style.display = "none"; // Hide the current step action
-
-  currentStep += direction; // Move to the next or previous step
-
-  document.getElementById("step" + currentStep).style.display = "block"; // Show the new step
-  document.getElementById("action" + currentStep).style.display = "block"; // Show the new step action
+  // Adjust the currentStep
+  currentStep += direction;
+  showStep(currentStep);
 }
 
-// Initialize the view
-document.getElementById("step2").style.display = "none"; // Initially hide step 2
-document.getElementById("action2").style.display = "none"; // Initially hide action 2
+function showStep(step) {
+  let steps = document.querySelectorAll(".step");
+  let actions = document.querySelectorAll(".step-actions");
+
+  steps.forEach((el) => {
+    // Display all steps up to the current step
+    el.style.display =
+      parseInt(el.getAttribute("data-step")) <= step ? "block" : "none";
+  });
+
+  actions.forEach((el) => {
+    // Only display the action for the current step
+    el.style.display =
+      parseInt(el.getAttribute("data-step-actions")) === step
+        ? "block"
+        : "none";
+  });
+}
+
+// Initialize
+document.addEventListener("DOMContentLoaded", function () {
+  showStep(currentStep);
+});
