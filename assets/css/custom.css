@@ -36,3 +36,7 @@
 .floating-booking-widget .price span {
   color: #192a5f;
 }
+
+.availability-calendar table tbody tr:last-of-type {
+  display: contents !important;
+}
