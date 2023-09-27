@@ -40,7 +40,7 @@
 .availability-calendar table tbody tr:last-of-type {
   display: contents !important;
 }
-.step {
+.step .step-actions {
   display: none;
 }
 

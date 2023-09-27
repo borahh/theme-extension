@@ -6,10 +6,6 @@ if (selectWrap) {
 }
 let currentStep = 1;
 
-document.addEventListener("DOMContentLoaded", function () {
-  showStep(currentStep);
-});
-
 function navigate(direction) {
   currentStep += direction;
   showStep(currentStep);
@@ -17,10 +13,22 @@ function navigate(direction) {
 
 function showStep(step) {
   let steps = document.querySelectorAll(".step");
-  steps.forEach((el, index) => {
-    el.classList.remove("active");
-    if (index + 1 === step) {
-      el.classList.add("active");
-    }
+  let actions = document.querySelectorAll(".step-actions");
+
+  steps.forEach((el) => {
+    el.style.display =
+      parseInt(el.getAttribute("data-step")) === step ? "block" : "none";
+  });
+
+  actions.forEach((el) => {
+    el.style.display =
+      parseInt(el.getAttribute("data-step-actions")) === step
+        ? "block"
+        : "none";
   });
 }
+
+// Initialize
+document.addEventListener("DOMContentLoaded", function () {
+  showStep(currentStep);
+});
