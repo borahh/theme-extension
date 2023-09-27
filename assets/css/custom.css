@@ -40,3 +40,10 @@
 .availability-calendar table tbody tr:last-of-type {
   display: contents !important;
 }
+.step {
+  display: none;
+}
+
+.step.active {
+  display: block;
+}
