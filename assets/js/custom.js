@@ -6,7 +6,8 @@ if (selectWrap) {
 }
 let currentStep = 1;
 
-function navigate(direction) {
+function navigate(event, direction) {
+  event.preventDefault();
   currentStep += direction;
   showStep(currentStep);
 }
